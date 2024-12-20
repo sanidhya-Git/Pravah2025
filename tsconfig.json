@@ -29,7 +29,8 @@
     ".next/types/**/*.ts",
     "components/common/Card/Card.jsx",
     "app/sureventphoto/page.jsx",
-    "app/sureventphoto/page.jsx"
+    "app/sureventphoto/page.jsx",
+    "app/celebiritynighteventphoto/page.tsx"
   ],
   "exclude": ["node_modules"]
 }
