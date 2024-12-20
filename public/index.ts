@@ -23,7 +23,6 @@ import south from './south.png';
 // Videos
 // import pravahOneVideo from "./pra"
 
-
 // const pravah1 = require('../pravah1.mp4');
 // const pravah2 = require('../pravah2.mp4');
 const indian_region = {
@@ -33,7 +32,6 @@ const indian_region = {
   west,
   south,
 };
-
 
 import one from './cultural_photo/1.png';
 import two from './cultural_photo/2.png';
@@ -59,7 +57,7 @@ import twentyone from './cultural_photo/21.webp';
 import twentytwo from './cultural_photo/22.webp';
 import twentythree from './cultural_photo/23.webp';
 
-import logo from "./logo.png"
+import logo from './logo.png';
 
 const cultural_photos = {
   one,
@@ -81,11 +79,10 @@ const cultural_photos = {
   seventeen,
   eighteen,
   nineteen,
-  twenty, 
+  twenty,
   twentyone,
-  twentytwo , 
+  twentytwo,
   twentythree,
-
 };
 export {
   sky,
@@ -98,5 +95,4 @@ export {
   indian_region,
   menu_bg,
   logo,
-
 };

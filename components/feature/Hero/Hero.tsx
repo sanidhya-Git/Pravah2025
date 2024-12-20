@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
 import { fonts } from '@/fonts';
 import { cultural_photos } from '@/public';
@@ -32,7 +32,7 @@ const celebrityImages = [
 ];
 
 const CountdownBoxes = () => {
-  const targets = [100, 200, 300, 400];
+  const targets = useMemo(() => [100, 200, 300, 400], []); // Wrapped in useMemo
   const [counts, setCounts] = useState(Array(targets.length).fill(0));
 
   useEffect(() => {
@@ -76,8 +76,6 @@ const CountdownBoxes = () => {
 };
 
 const CelebritySection: React.FC = () => {
-  const imagesToShow = 3;
-
   return (
     <section className="my-0 text-center">
       <h2 className={`text-5xl font-bold ${fonts.funkyVibes.className} mb-11`}>Prior-Celebrities</h2>
@@ -360,7 +358,7 @@ export const Hero: React.FC = () => {
               src={cultural_photos.seventeen}
               url=""
               color="#FFF5EB"
-              progress={10}
+              progress={10}              
               range={[0, 10]}
               targetScale={1}
             />

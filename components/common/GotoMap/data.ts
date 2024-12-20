@@ -2,11 +2,9 @@ import { indian_region } from '@/public';
 import { MapArea } from '@/types';
 import { StaticImageData } from 'next/image';
 
-
-
 export const MapSectionData: {
   slug: MapArea;
-  backgroundimage:StaticImageData;
+  backgroundimage: StaticImageData;
   text: string;
 }[] = [
   {
@@ -62,7 +60,7 @@ export const MapAreaMenu: {
   },
   {
     region: 'central',
-    
+
     links: [
       { label: 'Sponsors', href: '/' },
       { label: 'Become a Sponsor', href: '/' },
@@ -77,7 +75,7 @@ export const MapAreaMenu: {
   },
   {
     region: 'south',
-    
+
     links: [
       { label: 'Social', href: '/' },
       { label: 'Core Team', href: '/' },

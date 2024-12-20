@@ -22,10 +22,13 @@ export const GotoMap: React.FC = () => {
             <div key={index}>
               <>
                 {menu.links.map((link, index) => (
-                  <p key={index} >
-                    <Link href={link.href} className={`${fonts.funkyVibes.className} text-center text-[48px] text-white`}>
-                    {link.label}
-                  </Link>
+                  <p key={index}>
+                    <Link
+                      href={link.href}
+                      className={`${fonts.funkyVibes.className} text-center text-[48px] text-white`}
+                    >
+                      {link.label}
+                    </Link>
                   </p>
                 ))}
               </>
@@ -46,16 +49,22 @@ export const GotoMap: React.FC = () => {
             {MapSectionData.map((section, index) => (
               <div
                 key={index}
-                className="flex cursor-pointer items-center justify-center rounded-lg bg-gray-200 p-5 relative overflow-hidden" 
+                className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-200 p-5"
                 onClick={() => {
                   setMapArea(section.slug);
                 }}
               >
-                <div className='absolute top-0 left-0 w-full h-full bg-black'>
-                  <Image src={section.backgroundimage} alt={section.text} layout="fill" objectFit="cover" className='opacity-50 object-top' />
+                <div className="absolute left-0 top-0 h-full w-full bg-black">
+                  <Image
+                    src={section.backgroundimage}
+                    alt={section.text}
+                    layout="fill"
+                    objectFit="cover"
+                    className="object-top opacity-50"
+                  />
                 </div>
                 <p
-                  className={`text-sm font-semibold uppercase text-white relative z-10 ${section.slug === mapArea && 'underline'}`}
+                  className={`relative z-10 text-sm font-semibold uppercase text-white ${section.slug === mapArea && 'underline'}`}
                 >
                   {section.text}
                 </p>

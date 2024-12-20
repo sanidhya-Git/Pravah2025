@@ -4,17 +4,13 @@ import React from 'react';
 import { Hero } from '@/components/feature';
 import { GotoMap, Loader } from '@/components/common';
 
-
 const Home = () => {
   return (
     <>
       <Loader />
       <GotoMap />
       <Hero />
-      
-      
-
-   </>
+    </>
   );
 };
 

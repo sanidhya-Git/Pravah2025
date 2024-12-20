@@ -5,16 +5,22 @@ import { logo } from '@/public';
 import { fonts } from '@/fonts';
 const Hero = () => {
   return (
-    <div 
-      className="all p-8  bg-[#ffffec]"
+    <div
+      className="all bg-[#ffffec] p-8"
       // style={{backgroundImage: "url('/logo.png')", }}
     >
-      <div className="fixed top-0 left-0 z-10 flex h-screen w-full items-center justify-center">
-        <Image src={logo} alt="logo" width={2000} height={2000} className="aspect-square w-[700px] object-cover opacity-40" />
+      <div className="fixed left-0 top-0 z-10 flex h-screen w-full items-center justify-center">
+        <Image
+          src={logo}
+          alt="logo"
+          width={2000}
+          height={2000}
+          className="aspect-square w-[700px] object-cover opacity-40"
+        />
       </div>
 
-      <div className='relative z-30'>
-        <div className="hero ">
+      <div className="relative z-30">
+        <div className="hero">
           <h1 className={`text-5xl font-bold ${fonts.funkyVibes.className} mb-11`}>Annual Techno Cultural Fest</h1>
           <h2 className="hero-subtitle">Pravah 2025</h2>
           <p className="hero-description font-semibold">
@@ -34,9 +40,9 @@ const Hero = () => {
         {/* about.jss  */}
 
         <div className="about">
-          <h2 className={`text-xs  ${fonts.funkyVibes.className} mb-0 about-subTitle `}>About SKIT</h2>
-          <h1 className={`text-5xl   mb-11 about-subTitle `}>SKIT, Jaipur</h1>
-          <p className="about-description font-semibold ">
+          <h2 className={`text-xs ${fonts.funkyVibes.className} about-subTitle mb-0`}>About SKIT</h2>
+          <h1 className={`about-subTitle mb-11 text-5xl`}>SKIT, Jaipur</h1>
+          <p className="about-description font-semibold">
             Inspired by the timeless wisdom of Swami Keshvanand, embarked on its academic journey in the year 2000,
             thanks to the visionaries at the Technocrats and Managers Society of Advanced Learning and Gramothan.SKIT
             has blossomed into a beacon of academic brilliance in Northern India. We take immense pride in fostering

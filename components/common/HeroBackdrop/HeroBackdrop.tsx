@@ -13,7 +13,6 @@ import { fonts } from '@/fonts';
 import { ImageInfo } from '../ImageInfo';
 import { useHandleImageInfo } from '@/global/stateHooks';
 
-import { Button } from '@/components/ui';
 import logo from '@/public/logo.png'; // Import your logo here
 
 export const HeroBackdrop: React.FC = () => {
@@ -47,10 +46,9 @@ export const HeroBackdrop: React.FC = () => {
   }, []);
 
   const [currentVideo, setCurrentVideo] = useState(0);
-
   const [showVideo, setShowVideo] = useState(false);
 
-  // // Videos
+  // Videos
   const videos = [
     'https://res.cloudinary.com/dyggf8kxd/video/upload/v1733492155/pravah2_yhg5gx.mp4',
     'https://res.cloudinary.com/dyggf8kxd/video/upload/v1733492157/pravah1_jnumef.mp4',
@@ -59,25 +57,8 @@ export const HeroBackdrop: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const handleVideoPlayAndPause = () => {
-    const video = videoRef.current;
-    if (!video) return; // Guard clause: Ensure the video element exists
-
-    if (isPlaying) {
-      video.pause(); // Pause the video
-      setIsPlaying(false); // Update state to reflect paused state
-    } else {
-      video.play(); // Play the video
-      setIsPlaying(true); // Update state to reflect playing state
-    }
-  };
-
   const handleVideoChange = () => {
-    if (currentVideo === 0) {
-      setCurrentVideo(1);
-      return;
-    }
-    setCurrentVideo(0);
+    setCurrentVideo((prev) => (prev === 0 ? 1 : 0));
   };
 
   return (
@@ -85,7 +66,6 @@ export const HeroBackdrop: React.FC = () => {
       <div
         ref={container}
         onClick={() => {
-          // setCurrentVideo((value) => value + 1);
           setShowVideo(true);
           setIsPlaying(true);
         }}

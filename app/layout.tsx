@@ -8,7 +8,6 @@ import { fonts } from '@/fonts';
 import { env, generateSeo, GoogleAnalytics, Providers } from '@/utils';
 import { Footer } from '@/components/layout';
 
-
 // Generate SEO metadata
 export const metadata: Metadata = generateSeo({
   title: {
@@ -28,8 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fonts.montserrat} antialiased`}>
         <GoogleAnalytics GA_TRACKING_ID={env.GA_TRACKING_ID} />
-        <Providers>{children} 
-          
+        <Providers>
+          {children}
+
           <Footer />
         </Providers>
       </body>
