@@ -358,7 +358,7 @@ export const Hero: React.FC = () => {
               src={cultural_photos.seventeen}
               url=""
               color="#FFF5EB"
-              progress={10}              
+              progress={10}
               range={[0, 10]}
               targetScale={1}
             />

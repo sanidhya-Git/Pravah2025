@@ -4,7 +4,7 @@ import logo from '@/public/logo.png';
 // import font from '@/public/font.ttf';
 export const Footer: React.FC = () => {
   return (
-    <footer className="z-[50] relative border border-black bg-black py-10 text-white">
+    <footer className="relative z-[50] border border-black bg-black py-10 text-white">
       <div className="container mx-auto flex items-start justify-between px-4">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
