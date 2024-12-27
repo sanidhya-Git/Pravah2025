@@ -54,7 +54,7 @@ export const MapAreaMenu: {
   {
     region: 'west',
     links: [
-      { label: 'Events', href: '/' },
+      { label: 'Events', href: '/eventpage' },
       { label: 'Contact', href: '/' },
     ],
   },

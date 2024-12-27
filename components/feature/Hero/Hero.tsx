@@ -356,7 +356,7 @@ export const Hero: React.FC = () => {
               title="Thirak"
               description="This is the content of the card."
               src={cultural_photos.seventeen}
-              url=""
+              url="thirakeventphoto"
               color="#FFF5EB"
               progress={10}
               range={[0, 10]}
@@ -367,7 +367,7 @@ export const Hero: React.FC = () => {
               title="Sur"
               description="This is the content of the card."
               src={cultural_photos.sixteen}
-              url=""
+              url="sureventphoto"
               color="#FFEBD6"
               progress={10}
               range={[0, 10]}
@@ -378,7 +378,7 @@ export const Hero: React.FC = () => {
               title="Rawaz"
               description="This is the content of the card."
               src={cultural_photos.fifteen}
-              url=""
+              url="rawazeventphoto"
               color="#FFE0C2"
               progress={10}
               range={[0, 10]}
@@ -389,7 +389,7 @@ export const Hero: React.FC = () => {
               title="Celebrity Night"
               description="This is the content of the card."
               src={cultural_photos.thirteen}
-              url=""
+              url="celebiritynighteventphoto"
               color="#FFD6AD"
               progress={10}
               range={[0, 10]}
@@ -400,7 +400,7 @@ export const Hero: React.FC = () => {
               title="DJ Night"
               description="This is the content of the card."
               src={cultural_photos.fourteen}
-              url=""
+              url="djnighteventphoto"
               color="#FFCC99"
               progress={10}
               range={[0, 10]}
