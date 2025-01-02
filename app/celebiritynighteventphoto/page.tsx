@@ -8,10 +8,7 @@ import { logo } from '@/public';
 import { cultural_photos } from '@/public';
 
 export const DragCards = () => {
-  return (
-    
-    <Cards />
-  );
+  return <Cards />;
 };
 
 const Cards: React.FC = () => {
@@ -135,3 +132,4 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
 };
 
 export default DragCards;
+

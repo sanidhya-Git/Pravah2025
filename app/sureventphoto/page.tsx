@@ -8,9 +8,7 @@ import { logo } from '@/public';
 import { cultural_photos } from '@/public';
 
 export const DragCards = () => {
-  return (
-    <Cards />
-  );
+  return <Cards />;
 };
 
 const Cards: React.FC = () => {

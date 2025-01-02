@@ -5,7 +5,7 @@ import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import { fonts } from '@/fonts';
 
-const Card = ({ i, title, description, src, url, color, range, targetScale }) => {
+const Card = ({ i, title, description, src, url, color, range, scrollYProgress, targetScale }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
