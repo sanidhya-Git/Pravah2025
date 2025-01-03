@@ -358,7 +358,7 @@ export const Hero: React.FC = () => {
               src={cultural_photos.seventeen}
               url="thirakeventphoto"
               color="#FFF5EB"
-              scrollYProgress={10}
+              progress= {10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -369,7 +369,7 @@ export const Hero: React.FC = () => {
               src={cultural_photos.sixteen}
               url="sureventphoto"
               color="#FFEBD6"
-              scrollYProgress={10}
+              progress={10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -380,7 +380,7 @@ export const Hero: React.FC = () => {
               src={cultural_photos.fifteen}
               url="rawazeventphoto"
               color="#FFE0C2"
-              scrollYProgress={10}
+              progress={10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -391,7 +391,7 @@ export const Hero: React.FC = () => {
               src={cultural_photos.thirteen}
               url="celebiritynighteventphoto"
               color="#FFD6AD"
-              scrollYProgress={10}
+              progress={10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -402,7 +402,7 @@ export const Hero: React.FC = () => {
               src={cultural_photos.fourteen}
               url="djnighteventphoto"
               color="#FFCC99"
-              scrollYProgress={10}
+              progress={10}
               range={[0, 10]}
               targetScale={1}
             />
