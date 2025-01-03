@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { logo } from '@/public';
 import { cultural_photos } from '@/public';
 
-export const DragCards = () => {
+const DragCards = () => {
   return <Cards />;
 };
 
