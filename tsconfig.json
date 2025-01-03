@@ -31,6 +31,6 @@
     "app/sureventphoto/page.jsx",
     "app/sureventphoto/page.jsx",
     "app/celebiritynighteventphoto/page.tsx"
-  ],
+, ".next/types/app/djnighteventphoto/page.tsx"  ],
   "exclude": ["node_modules"]
 }

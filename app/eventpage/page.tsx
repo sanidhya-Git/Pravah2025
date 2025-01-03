@@ -4,7 +4,7 @@ import { Card, CardFooter, Image, Button } from '@nextui-org/react';
 import { cultural_photos } from '@/public';
 import React from 'react';
 
-export default function App() {
+const EventPage:React.FC = () => {
   return (
     <div className="p-4">
       <h1 className="mb-4 text-2xl font-bold">Events</h1>
@@ -96,3 +96,5 @@ export default function App() {
     </div>
   );
 }
+
+export default EventPage

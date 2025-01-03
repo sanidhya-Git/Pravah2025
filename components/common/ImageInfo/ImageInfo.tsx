@@ -5,6 +5,7 @@ import React from 'react';
 
 // shadcn components
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui';
+import {  DialogTitle } from '@radix-ui/react-dialog';
 
 export const ImageInfo: React.FC = () => {
   const { imageInfo } = useHandleImageInfo();
@@ -22,7 +23,9 @@ export const ImageInfo: React.FC = () => {
             <div className="flex gap-5">
               <div className="h-[200px] w-[350px] rounded-lg bg-gray-200"></div>
               <div>
+                <DialogTitle>                  
                 <p>{imageInfo.imageTitle}</p>
+                </DialogTitle>
                 <p>{imageInfo.imageDescription}</p>
               </div>
             </div>

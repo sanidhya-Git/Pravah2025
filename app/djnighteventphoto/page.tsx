@@ -7,11 +7,9 @@ import Image from 'next/image';
 import { logo } from '@/public';
 import { cultural_photos } from '@/public';
 
-export const DragCards = () => {
-  return <Cards />;
-};
 
-const Cards: React.FC = () => {
+
+const DJNightEventPhototCards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   return (
     <div className="relative min-h-screen w-full bg-[#ffffec]">
@@ -133,4 +131,4 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
   );
 };
 
-export default Cards;
+export default DJNightEventPhototCards;
