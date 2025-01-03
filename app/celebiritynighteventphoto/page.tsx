@@ -7,9 +7,9 @@ import Image from 'next/image';
 import { logo } from '@/public';
 import { cultural_photos } from '@/public';
 
-const DragCards = () => {
-  return <Cards />;
-};
+const DragCards: React.FC = () => (
+  <Cards />
+);
 
 const Cards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null); // Specify the type for the ref
