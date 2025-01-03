@@ -7,10 +7,6 @@ import Image from 'next/image';
 import { logo } from '@/public';
 import { cultural_photos } from '@/public';
 
-const DragCards: React.FC = () => (
-  <Cards />
-);
-
 const Cards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null); // Specify the type for the ref
   return (
@@ -131,4 +127,4 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
   );
 };
 
-export default DragCards;
+export default Cards;
