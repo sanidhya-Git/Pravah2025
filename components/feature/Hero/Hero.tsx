@@ -32,7 +32,7 @@ const celebrityImages = [
 ];
 
 const CountdownBoxes = () => {
-  const targets = useMemo(() => [100, 200, 300, 400], []); // Wrapped in useMemo
+  const targets = useMemo(() => [100, 200, 300, 400], []);
   const [counts, setCounts] = useState(Array(targets.length).fill(0));
 
   useEffect(() => {
@@ -40,22 +40,22 @@ const CountdownBoxes = () => {
       setCounts((prevCounts) =>
         prevCounts.map((count, index) => {
           if (count < targets[index]) {
-            return Math.min(count + Math.ceil(targets[index] / 10), targets[index]); // Increment towards the target
+            return Math.min(count + Math.ceil(targets[index] / 10), targets[index]);
           }
-          return count; // Return the current count if the target is reached
+          return count;
         }),
       );
-    }, 100); // Update every 0.1 seconds
+    }, 100);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);
   }, [targets]);
 
   return (
-    <div className="my-16 flex justify-around">
+    <div className="my-16 flex flex-wrap justify-around">
       {counts.map((count, index) => (
         <motion.div
           key={index}
-          className="k w-1/5 rounded-lg bg-black p-6 text-white shadow-lg"
+          className="k w-full sm:w-1/2 md:w-1/4 rounded-lg bg-black p-6 text-white shadow-lg m-2"
           initial={{ opacity: 0, scale: 0.89 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
     <>
       <div>
         <HeroBackdrop />
-        <div className="lg:px- 16 relative z-40 w-full bg-[#ffffec] px-2 pt-[50px] md:px-2 xl:px-[100px]">
+        <div className="lg:px-16 relative z-40 w-full bg-[#ffff ec] px-2 pt-[50px] md:px-2 xl:px-[100px]">
           <section className="text-center leading-none">
             <p className={`text-lg md:text-xl lg:text-2xl ${fonts.funkyVibes.className}`}>Welcome to</p>
             <p className={`-mt-2 text-3xl md:text-4xl lg:text-[48px] ${fonts.funkyVibes.className}`}>North India</p>
@@ -139,7 +139,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={800}
                 height={800}
-                className="mt-3 w-[400px]"
+                className="mt-3 w-[400px] md:w-[500px] lg:w-[600px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -156,8 +156,9 @@ export const Hero: React.FC = () => {
               </div>
             </motion.div>
           </section>
-          <div className="my-3 flex items-start justify-between">
-            <div className="flex flex-col">
+
+          <div className="my-3 flex flex-col md:flex-row items-start justify-between">
+            <div className="flex flex-col w-full md:w-1/2">
               <motion.div
                 className={`curved-border text-center`}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -166,10 +167,9 @@ export const Hero: React.FC = () => {
               >
                 <h2 className={`text-4xl font-bold ${fonts.funkyVibes.className}`}>Logo Reveal</h2>
                 <br />
-                {/* Container for the video with curved edges */}
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <iframe
-                    width="560"
+                    width="100%"
                     height="315"
                     src="https://www.youtube.com/embed/HVL4Fgel8S4?si=Cw06vipSycFKiymv"
                     title="YouTube video player"
@@ -179,38 +179,33 @@ export const Hero: React.FC = () => {
                     allowFullScreen
                   ></iframe>
                 </div>
-
                 <br />
               </motion.div>
             </div>
 
-            <div className="my-3 flex items-start justify-between">
-              <div className="flex flex-col">
-                <motion.div
-                  className={`curved-border text-center`}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className={`text-4xl font-bold ${fonts.funkyVibes.className}`}>Logo Reveal</h2>
-                  <br />
-                  {/* Container for the video with curved edges */}
-                  <div className="overflow-hidden rounded-lg shadow-lg">
-                    <iframe
-                      width="560"
-                      height="304"
-                      src="https://www.youtube.com/embed/DyuUx1obJ_M?si=vErZx_7EbwskjJVo"
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-
-                  <br />
-                </motion.div>
-              </div>
+            <div className="flex flex-col w-full md:w-1/2">
+              <motion.div
+                className={`curved-border text-center`}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className={`text-4xl font-bold ${fonts.funkyVibes.className}`}>Logo Reveal</h2>
+                <br />
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <iframe
+                    width="100%"
+                    height="304"
+                    src="https://www.youtube.com/embed/DyuUx1obJ_M?si=vErZx_7EbwskjJVo"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <br />
+              </motion.div>
             </div>
           </div>
 
@@ -221,7 +216,7 @@ export const Hero: React.FC = () => {
           <section className="flex justify-center md:justify-evenly">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 1, scale:  1 }}
               transition={{ duration: 0.5 }}
               className="relative w-fit"
             >
@@ -231,7 +226,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={200}
                 height={200}
-                className="mt-3 w-[300px]"
+                className="mt-3 w-[300px] md:w-[400px] lg:w-[500px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -278,7 +273,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={200}
                 height={200}
-                className="mt-3 w-[300px]"
+                className="mt-3 w-[300px] md:w-[400px] lg:w-[500px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -323,7 +318,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={200}
                 height={200}
-                className="mt-3 w-[300px]"
+                className="mt-3 w-[300 px] md:w-[400px] lg:w-[500px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -358,7 +353,6 @@ export const Hero: React.FC = () => {
               src={cultural_photos.seventeen}
               url="thirakeventphoto"
               color="#FFF5EB"
-              // scrollYProgress={10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -369,7 +363,6 @@ export const Hero: React.FC = () => {
               src={cultural_photos.sixteen}
               url="sureventphoto"
               color="#FFEBD6"
-              // scrollYProgress={10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -380,7 +373,6 @@ export const Hero: React.FC = () => {
               src={cultural_photos.fifteen}
               url="rawazeventphoto"
               color="#FFE0C2"
-              // scrollYProgress={10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -391,7 +383,6 @@ export const Hero: React.FC = () => {
               src={cultural_photos.thirteen}
               url="celebiritynighteventphoto"
               color="#FFD6AD"
-              // scrollYProgress={10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -402,7 +393,6 @@ export const Hero: React.FC = () => {
               src={cultural_photos.fourteen}
               url="djnighteventphoto"
               color="#FFCC99"
-              // scrollYProgress={10}
               range={[0, 10]}
               targetScale={1}
             />
@@ -425,7 +415,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={200}
                 height={200}
-                className="mt-3 w-[300px]"
+                className="mt-3 w-[300px] md:w-[400px] lg:w-[500px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -434,7 +424,7 @@ export const Hero: React.FC = () => {
                   setImageInfo({
                     imageTitle: 'Kettuvallams',
                     imageDescription:
-                      'The image showcases Keralas houseboats, known as Kettuvallams, which are an integral part of South Indian culture. Traditionally used to transport goods like rice and spices, these boats now serve as floating homes for tourists exploring Keralas scenic backwaters. Crafted from eco-friendly materials like bamboo and wood, houseboats reflect Kerala’s sustainable architecture and rich craftsmanship. They offer serene journeys through lush landscapes, coconut groves, and peaceful villages. The backwaters, a unique network of canals and lakes, are central to Kerala’s tourism and local life. These houseboats symbolize Kerala’s natural beauty, cultural heritage, and the state’s renowned hospitality.',
+                      'The image showcases Keralas houseboats, known as Kettuvallams, which are an integral part of South Indian culture. Traditionally used to transport goods like rice and spices, these boats now serve as floating homes for tourists exploring Keralas scenic backwaters. Crafted from eco-friendly materials like bamboo and wood, houseboats reflect Kerala’s sustainable architecture and rich craftsmanship. They offer serene journeys through lush landscapes, coconut gro ves, and peaceful villages. The backwaters, a unique network of canals and lakes, are central to Kerala’s tourism and local life. These houseboats symbolize Kerala’s natural beauty, cultural heritage, and the state’s renowned hospitality.',
                   });
                 }}
               >

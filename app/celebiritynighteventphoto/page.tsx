@@ -28,7 +28,7 @@ const Cards: React.FC = () => {
           rotate="6deg"
           top="20%"
           left="25%"
-          className="w-36 md:w-56"
+          className="w-36 md:w-56 lg:w-64 xl:w-72" // Added lg and xl breakpoints
         />
         <Card
           containerRef={containerRef}
@@ -37,7 +37,7 @@ const Cards: React.FC = () => {
           rotate="12deg"
           top="45%"
           left="60%"
-          className="w-24 md:w-48"
+          className="w-24 md:w-48 lg:w-56 xl:w-64" // Added lg and xl breakpoints
         />
         <Card
           containerRef={containerRef}
@@ -46,7 +46,7 @@ const Cards: React.FC = () => {
           rotate="-6deg"
           top="20%"
           left="40%"
-          className="w-52 md:w-80"
+          className="w-52 md:w-80 lg:w-96 xl:w-112" // Added lg and xl breakpoints
         />
         <Card
           containerRef={containerRef}
@@ -55,7 +55,7 @@ const Cards: React.FC = () => {
           rotate="8deg"
           top="50%"
           left="40%"
-          className="w-48 md:w-72"
+          className="w-48 md:w-72 lg:w-80 xl:w-96" // Added lg and xl breakpoints
         />
         <Card
           containerRef={containerRef}
@@ -64,7 +64,7 @@ const Cards: React.FC = () => {
           rotate="18deg"
           top="20%"
           left="65%"
-          className="w-40 md:w-64"
+          className="w-40 md:w-64 lg:w-72 xl:w-80" // Added lg and xl breakpoints
         />
         <Card
           containerRef={containerRef}
@@ -73,7 +73,7 @@ const Cards: React.FC = () => {
           rotate="-3deg"
           top="35%"
           left="55%"
-          className="w-24 md:w-48"
+          className="w-24 md:w-48 lg:w-56 xl:w-64" // Added lg and xl breakpoints
         />
       </div>
     </div>
@@ -100,7 +100,7 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
     els.forEach((el) => {
       const zIndex = parseInt(window.getComputedStyle(el).getPropertyValue('z-index'));
 
-      if (!isNaN(zIndex) && zIndex > maxZIndex) {
+      if (!isNaN(zIndex) && zIndex > maxZIndex ) {
         maxZIndex = zIndex;
       }
     });

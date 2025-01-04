@@ -7,7 +7,6 @@ import Image from 'next/image';
 import { logo } from '@/public';
 import { cultural_photos } from '@/public';
 
-
 const SurEventPhotoCards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   return (
@@ -29,7 +28,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="6deg"
           top="20%"
           left="25%"
-          className="w-36 md:w-56"
+          className="w-36 md:w-56 lg:w-64"
         />
         <Card
           containerRef={containerRef}
@@ -38,7 +37,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="12deg"
           top="45%"
           left="60%"
-          className="w-24 md:w-48"
+          className="w-24 md:w-48 lg:w-56"
         />
         <Card
           containerRef={containerRef}
@@ -47,7 +46,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="-6deg"
           top="20%"
           left="40%"
-          className="w-52 md:w-80"
+          className="w-52 md:w-80 lg:w-96"
         />
         <Card
           containerRef={containerRef}
@@ -56,7 +55,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="8deg"
           top="50%"
           left="40%"
-          className="w-48 md:w-72"
+          className="w-48 md:w-72 lg:w-80"
         />
         <Card
           containerRef={containerRef}
@@ -65,7 +64,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="-25deg"
           top="70%"
           left="60%"
-          className="w-36 md:w-56"
+          className="w-36 md:w-56 lg:w-64"
         />
         <Card
           containerRef={containerRef}
@@ -74,7 +73,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="18deg"
           top="20%"
           left="65%"
-          className="w-40 md:w-64"
+          className="w-40 md:w-64 lg:w-72"
         />
         <Card
           containerRef={containerRef}
@@ -83,7 +82,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="-3deg"
           top="35%"
           left="55%"
-          className="w-24 md:w-48"
+          className="w-24 md:w-48 lg:w-56"
         />
       </div>
     </div>
@@ -127,7 +126,7 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
         rotate,
         zIndex,
       }}
-      className={twMerge('drag-elements absolute w-48 bg-neutral-200 p-1 pb-4', className)}
+      className={twMerge('drag-elements absolute bg-neutral-200 p-1 pb-4', className)}
       src={src}
       alt={alt}
       drag

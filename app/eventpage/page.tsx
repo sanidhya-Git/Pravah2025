@@ -4,11 +4,11 @@ import { Card, CardFooter, Image, Button } from '@nextui-org/react';
 import { cultural_photos } from '@/public';
 import React from 'react';
 
-const EventPage:React.FC = () => {
+const EventPage: React.FC = () => {
   return (
     <div className="p-4">
       <h1 className="mb-4 text-2xl font-bold">Events</h1>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {/* First Row: Three Cards */}
         <Card isFooterBlurred className="border-none" radius="lg">
           <Image
@@ -59,7 +59,7 @@ const EventPage:React.FC = () => {
         </Card>
       </div>
 
-      <div className="mt-4 grid grid-cols-2 gap-4">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Second Row: Two Cards */}
         <Card isFooterBlurred className="border-none" radius="lg">
           <Image
@@ -95,6 +95,6 @@ const EventPage:React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
-export default EventPage
+export default EventPage;

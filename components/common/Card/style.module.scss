@@ -75,3 +75,103 @@
     }
   }
 }
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .cardContainer {
+    height: auto; /* Allow height to adjust */
+    padding: 10px; /* Add some padding */
+  }
+
+  .card {
+    height: auto; /* Allow height to adjust */
+    width: 100%; /* Full width */
+    padding: 20px; /* Reduce padding */
+    
+    h2 {
+      font-size: 24px; /* Smaller font size */
+    }
+
+    .body {
+      flex-direction: column; /* Stack description and image */
+      gap: 20px; /* Increase gap */
+      
+      .description {
+        width: 100%; /* Full width */
+        position: static; /* Reset position */
+        top: 0; /* Reset top */
+      }
+
+      .imageContainer {
+        width: 100%; /* Full width */
+        height: 200px; /* Fixed height for images */
+      }
+    }
+  }
+}
+
+/* Tablet Devices */
+@media (min-width: 601px) and (max-width: 900px) {
+  .cardContainer {
+    height: auto; /* Allow height to adjust */
+    padding: 20px; /* Add some padding */
+  }
+
+  .card {
+    height: auto; /* Allow height to adjust */
+    width: 80%; /* 80% width */
+    padding: 30px; /* Reduce padding */
+    
+    h2 {
+      font-size: 26px; /* Smaller font size */
+    }
+
+    .body {
+      flex-direction: row; /* Keep description and image side by side */
+      gap: 15px; /* Adjust gap */
+      
+      .description {
+        width: 45%; /* Adjust width */
+      }
+
+      .imageContainer {
+        width: 55%; /* Adjust width */
+        height: 300px; /* Fixed height for images */
+      }
+    }
+  }
+}
+
+/* Desktop Devices */
+@media (min-width: 901px) {
+  .cardContainer {
+    height: 75vh; /* Keep original height */
+    padding: 50px; /* Original padding */
+  }
+
+  .card {
+    height: 500px; /* Keep original height */
+    width: 1000px; /* Keep original width */
+    padding: 50px; /* Original padding */
+    
+    h2 {
+      font-size: 28px; /* Original font size */
+    }
+
+    .body {
+      flex-direction: row; /* Keep description and image side by side */
+      gap: 10px; /* Original gap */
+      
+      .description {
+        width: 40%; /* Original width */
+      }
+
+      .imageContainer {
+        width: 60%; /* Original width */
+        height: 100%; /* Original height */
+      }
+    }
+  }
+}
