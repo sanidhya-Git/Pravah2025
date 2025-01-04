@@ -8,7 +8,7 @@ const EventPage: React.FC = () => {
   return (
     <div className="p-4">
       <h1 className="mb-4 text-2xl font-bold">Events</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {/* First Row: Three Cards */}
         <Card isFooterBlurred className="border-none" radius="lg">
           <Image
@@ -59,7 +59,7 @@ const EventPage: React.FC = () => {
         </Card>
       </div>
 
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {/* Second Row: Two Cards */}
         <Card isFooterBlurred className="border-none" radius="lg">
           <Image

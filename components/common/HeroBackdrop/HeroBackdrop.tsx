@@ -69,7 +69,7 @@ export const HeroBackdrop: React.FC = () => {
           setShowVideo(true);
           setIsPlaying(true);
         }}
-        className="relative z-[30] h-screen w-full flex items-center justify-center overflow-hidden"
+        className="relative z-[30] flex h-screen w-full items-center justify-center overflow-hidden"
       >
         {/* Logo */}
         <div className="absolute left-4 top-1 z-50">
@@ -102,7 +102,7 @@ export const HeroBackdrop: React.FC = () => {
 
         <div
           ref={pravah_ref}
-          className="absolute left-[50%] top-[100px] w [500px] -translate-x-1/2 text-center leading-none text-[#476b7f]"
+          className="w [500px] absolute left-[50%] top-[100px] -translate-x-1/2 text-center leading-none text-[#476b7f]"
         >
           <p className={`text-center ${fonts.funkyVibes.className} text-[120px] sm:text-[80px] md:text-[100px]`}>
             Pravah

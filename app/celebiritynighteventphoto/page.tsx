@@ -46,7 +46,7 @@ const Cards: React.FC = () => {
           rotate="-6deg"
           top="20%"
           left="40%"
-          className="w-52 md:w-80 lg:w-96 xl:w-112" // Added lg and xl breakpoints
+          className="xl:w-112 w-52 md:w-80 lg:w-96" // Added lg and xl breakpoints
         />
         <Card
           containerRef={containerRef}
@@ -100,7 +100,7 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
     els.forEach((el) => {
       const zIndex = parseInt(window.getComputedStyle(el).getPropertyValue('z-index'));
 
-      if (!isNaN(zIndex) && zIndex > maxZIndex ) {
+      if (!isNaN(zIndex) && zIndex > maxZIndex) {
         maxZIndex = zIndex;
       }
     });

@@ -46,7 +46,7 @@ const DJNightEventPhototCards: React.FC = () => {
           rotate="-6deg"
           top="20%"
           left="40%"
-          className="w-52 md:w-80 lg:w-96 xl:w-112 2xl:w-128"
+          className="xl:w-112 2xl:w-128 w-52 md:w-80 lg:w-96"
         />
         <Card
           containerRef={containerRef}
@@ -55,7 +55,7 @@ const DJNightEventPhototCards: React.FC = () => {
           rotate="8deg"
           top="50%"
           left="40%"
-          className="w-48 md:w-72 lg:w-80 xl:w-96 2xl:w-112"
+          className="2xl:w-112 w-48 md:w-72 lg:w-80 xl:w-96"
         />
         <Card
           containerRef={containerRef}

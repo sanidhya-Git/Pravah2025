@@ -55,7 +55,7 @@ const CountdownBoxes = () => {
       {counts.map((count, index) => (
         <motion.div
           key={index}
-          className="k w-full sm:w-1/2 md:w-1/4 rounded-lg bg-black p-6 text-white shadow-lg m-2"
+          className="k m-2 w-full rounded-lg bg-black p-6 text-white shadow-lg sm:w-1/2 md:w-1/4"
           initial={{ opacity: 0, scale: 0.89 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
     <>
       <div>
         <HeroBackdrop />
-        <div className="lg:px-16 relative z-40 w-full bg-[#ffff ec] px-2 pt-[50px] md:px-2 xl:px-[100px]">
+        <div className="bg-[#ffff ec] relative z-40 w-full px-2 pt-[50px] md:px-2 lg:px-16 xl:px-[100px]">
           <section className="text-center leading-none">
             <p className={`text-lg md:text-xl lg:text-2xl ${fonts.funkyVibes.className}`}>Welcome to</p>
             <p className={`-mt-2 text-3xl md:text-4xl lg:text-[48px] ${fonts.funkyVibes.className}`}>North India</p>
@@ -139,7 +139,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={800}
                 height={800}
-                className="mt-3 w-[400px] md:w-[500px] lg:w-[600px]"
+                className="mt-3 w-[300px] md:w-[300px] lg:w-[300px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -157,8 +157,8 @@ export const Hero: React.FC = () => {
             </motion.div>
           </section>
 
-          <div className="my-3 flex flex-col md:flex-row items-start justify-between">
-            <div className="flex flex-col w-full md:w-1/2">
+          <div className="my-3 flex flex-col items-start justify-between md:flex-row">
+            <div className="flex w-full flex-col md:w-1/2">
               <motion.div
                 className={`curved-border text-center`}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -183,7 +183,7 @@ export const Hero: React.FC = () => {
               </motion.div>
             </div>
 
-            <div className="flex flex-col w-full md:w-1/2">
+            <div className="flex w-full flex-col md:w-1/2">
               <motion.div
                 className={`curved-border text-center`}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -216,7 +216,7 @@ export const Hero: React.FC = () => {
           <section className="flex justify-center md:justify-evenly">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale:  1 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               className="relative w-fit"
             >
@@ -226,7 +226,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={200}
                 height={200}
-                className="mt-3 w-[300px] md:w-[400px] lg:w-[500px]"
+                className="mt-3 w-[300px] md:w-[300px] lg:w-[300px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -273,7 +273,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={200}
                 height={200}
-                className="mt-3 w-[300px] md:w-[400px] lg:w-[500px]"
+                className="mt-3 w-[300px] md:w-[300px] lg:w-[300px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -318,7 +318,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={200}
                 height={200}
-                className="mt-3 w-[300 px] md:w-[400px] lg:w-[500px]"
+                className="mt-3 w-[300px] md:w-[300px] lg:w-[300px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
@@ -415,7 +415,7 @@ export const Hero: React.FC = () => {
                 alt="cultural_photo"
                 width={200}
                 height={200}
-                className="mt-3 w-[300px] md:w-[400px] lg:w-[500px]"
+                className="mt-3 w-[300px] md:w-[300px] lg:w-[300px]"
               />
               <div
                 className="absolute bottom-[100px] right-0 z-50"
