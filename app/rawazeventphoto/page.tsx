@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -123,7 +123,7 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
         rotate,
         zIndex,
       }}
-      className={twMerge('drag-elements absolute bg-neutral-200 p-1 pb- 4', className)}
+      className={twMerge('drag-elements pb- 4 absolute bg-neutral-200 p-1', className)}
       src={src}
       alt={alt}
       drag

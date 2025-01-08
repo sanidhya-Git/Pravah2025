@@ -110,7 +110,7 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
       let maxZIndex = -Infinity;
 
       els.forEach((el) => {
-        const zIndex = parseInt(window .getComputedStyle(el).getPropertyValue('z-index'));
+        const zIndex = parseInt(window.getComputedStyle(el).getPropertyValue('z-index'));
 
         if (!isNaN(zIndex) && zIndex > maxZIndex) {
           maxZIndex = zIndex;

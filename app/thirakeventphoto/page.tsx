@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
@@ -88,45 +88,47 @@ interface CardProps {
   rotate: string;
   className: string;
 }
-
 const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate, src, top }) => {
   const [zIndex, setZIndex] = useState<number>(0);
-  const [isLocked, setIsLocked] = useState<boolean>(false); // State to track lock status
+  const [isLocked, setIsLocked] = useState<boolean>(false);
 
   const updateZIndex = () => {
-    const els = document.querySelectorAll('.drag-elements');
+    if (!isLocked) {
+      const els = document.querySelectorAll('.drag-elements');
 
-    let maxZIndex = -Infinity;
+      let maxZIndex = -Infinity;
 
-    els.forEach((el) => {
-      const zIndex = parseInt(window.getComputedStyle(el).getPropertyValue('z-index'));
+      els.forEach((el) => {
+        const zIndex = parseInt(window.getComputedStyle(el).getPropertyValue('z-index'));
 
-      if (!isNaN(zIndex) && zIndex > maxZIndex) {
-        maxZIndex = zIndex;
-      }
-    });
+        if (!isNaN(zIndex) && zIndex > maxZIndex) {
+          maxZIndex = zIndex;
+        }
+      });
 
-    setZIndex(maxZIndex + 1);
+      setZIndex(maxZIndex + 1);
+    }
   };
 
   const handleContextMenu = (event: React.MouseEvent) => {
-    event.preventDefault(); // Prevent the default context menu from appearing setIsLocked((prev) => !prev); // Toggle the lock state
+    event.preventDefault();
+    setIsLocked((prev) => !prev); // Toggle lock state on right-click
   };
 
   return (
     <motion.img
       onMouseDown={updateZIndex}
-      onContextMenu={handleContextMenu} // Add the context menu handler
+      onContextMenu={handleContextMenu}
       style={{
         top,
         left,
         rotate,
         zIndex,
       }}
-      className={twMerge('drag-elements absolute bg -neutral-200 p-1 pb-4', className)}
+      className={twMerge('drag-elements absolute bg-neutral-200 p-1 pb-4', className)}
       src={src}
       alt={alt}
-      drag={!isLocked} // Prevent dragging if locked
+      drag={!isLocked}
       dragConstraints={containerRef}
       dragElastic={0.65}
     />
