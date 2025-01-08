@@ -113,7 +113,6 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
     const els = document.querySelectorAll('.drag-elements');
 
     let maxZIndex = -Infinity;
-
     els.forEach((el) => {
       const zIndex = parseInt(window.getComputedStyle(el).getPropertyValue('z-index'));
 
