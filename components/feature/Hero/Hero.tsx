@@ -1,4 +1,4 @@
-'use client';
+"use client"
 
 import React, { useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
@@ -109,7 +109,7 @@ const CelebritySection: React.FC = () => {
             <SwiperSlide key={index} className="pb-8 md:pb-10 lg:pb-12">
               <div className="flex w-full justify-center">
                 <Image
-                  src={celebrityDetails}
+ src={celebrityDetails}
                   alt={`Celebrity ${index + 1}`} // More descriptive alt text
                   width={250} // Adjusted for responsive design
                   height={250} // Adjusted for responsive design
@@ -126,6 +126,18 @@ const CelebritySection: React.FC = () => {
 
 export const Hero: React.FC = () => {
   const { setImageInfo, setShowImageInfo } = useHandleImageInfo();
+
+  useEffect(() => {
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+
+    window.addEventListener('contextmenu', handleContextMenu);
+
+    return () => {
+      window.removeEventListener('contextmenu', handleContextMenu);
+    };
+  }, []);
 
   return (
     <>
@@ -417,7 +429,7 @@ export const Hero: React.FC = () => {
 
           <section className="flex justify-center md:justify-evenly">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity:  0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
               className="relative w-fit"
@@ -437,7 +449,7 @@ export const Hero: React.FC = () => {
                   setImageInfo({
                     imageTitle: 'Kettuvallams',
                     imageDescription:
-                      'The image showcases Keralas houseboats, known as Kettuvallams, which are an integral part of South Indian culture. Traditionally used to transport goods like rice and spices, these boats now serve as floating homes for tourists exploring Keralas scenic backwaters. Crafted from eco-friendly materials like bamboo and wood, houseboats reflect Kerala’s sustainable architecture and rich craftsmanship. They offer serene journeys through lush landscapes, coconut gro ves, and peaceful villages. The backwaters, a unique network of canals and lakes, are central to Kerala’s tourism and local life. These houseboats symbolize Kerala’s natural beauty, cultural heritage, and the state’s renowned hospitality.',
+                      'The image showcases Keralas houseboats, known as Kettuvallams, which are an integral part of South Indian culture. Traditionally used to transport goods like rice and spices, these boats now serve as floating homes for tourists exploring Keralas scenic backwaters. Crafted from eco-friendly materials like bamboo and wood, houseboats reflect Kerala’s sustainable architecture and rich craftsmanship. They offer serene journeys through lush landscapes, coconut groves, and peaceful villages. The backwaters, a unique network of canals and lakes, are central to Kerala’s tourism and local life. These houseboats symbolize Kerala’s natural beauty, cultural heritage, and the state’s renowned hospitality.',
                   });
                 }}
               >

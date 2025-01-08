@@ -46,7 +46,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="-6deg"
           top="20%"
           left="40%"
-          className="w-52 md:w-80 lg:w-96 xl:w-112 2xl:w-128"
+          className="xl:w-112 2xl:w-128 w-52 md:w-80 lg:w-96"
         />
         <Card
           containerRef={containerRef}
@@ -55,7 +55,7 @@ const SurEventPhotoCards: React.FC = () => {
           rotate="8deg"
           top="50%"
           left="40%"
-          className="w-48 md:w-72 lg:w-80 xl:w-96 2xl:w-112"
+          className="2xl:w-112 w-48 md:w-72 lg:w-80 xl:w-96"
         />
         <Card
           containerRef={containerRef}
@@ -101,33 +101,42 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate, src, top }) => {
   const [zIndex, setZIndex] = useState<number>(0);
+  const [isLocked, setIsLocked] = useState<boolean>(false);
 
   const updateZIndex = () => {
-    const els = document.querySelectorAll('.drag-elements');
+    if (!isLocked) {
+      const els = document.querySelectorAll('.drag-elements');
 
-    let maxZIndex = -Infinity;
+      let maxZIndex = -Infinity;
 
-    els.forEach((el) => {
-      const zIndex = parseInt(window.getComputedStyle(el).getPropertyValue('z-index'));
+      els.forEach((el) => {
+        const zIndex = parseInt(window .getComputedStyle(el).getPropertyValue('z-index'));
 
-      if (!isNaN(zIndex) && zIndex > maxZIndex) {
-        maxZIndex = zIndex;
-      }
-    });
+        if (!isNaN(zIndex) && zIndex > maxZIndex) {
+          maxZIndex = zIndex;
+        }
+      });
 
-    setZIndex(maxZIndex + 1);
+      setZIndex(maxZIndex + 1);
+    }
+  };
+
+  const handleContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsLocked((prev) => !prev); // Toggle lock state on right-click
   };
 
   return (
     <motion.img
       onMouseDown={updateZIndex}
+      onContextMenu={handleContextMenu}
       style={{
         top,
         left,
         rotate,
         zIndex,
       }}
- className={twMerge('drag-elements absolute bg-neutral-200 p-1 pb-4', className)}
+      className={twMerge('drag-elements absolute bg-neutral-200 p-1 pb-4', className)}
       src={src}
       alt={alt}
       drag

@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react'; // Import useEffect
 import { motion } from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
 import Image from 'next/image';
@@ -8,7 +8,23 @@ import { logo } from '@/public';
 import { cultural_photos } from '@/public';
 
 const Cards: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null); // Specify the type for the ref
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  // Add useEffect to lock right-click
+  useEffect(() => {
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault(); // Prevent the default context menu
+    };
+
+    // Attach the event listener to the document
+    document.addEventListener('contextmenu', handleContextMenu);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+    };
+  }, []);
+
   return (
     <div className="relative min-h-screen w-full bg-[#ffffec]">
       <div className="fixed left-0 top-0 z-10 flex h-screen w-full items-center justify-center">
@@ -46,7 +62,7 @@ const Cards: React.FC = () => {
           rotate="-6deg"
           top="20%"
           left="40%"
-          className="w-52 md:w-80 lg:w-96 xl:w-112"
+          className="xl:w-112 w-52 md:w-80 lg:w-96"
         />
         <Card
           containerRef={containerRef}
@@ -81,17 +97,18 @@ const Cards: React.FC = () => {
 };
 
 interface CardProps {
-  containerRef: React.RefObject<HTMLDivElement>; // Specify the type for the ref
-  src: string; // URL of the image
-  alt: string; // Alt text for the image
-  top: string; // CSS property
-  left: string; // CSS property
-  rotate: string; // CSS property
-  className: string; // CSS classes
+  containerRef: React.RefObject<HTMLDivElement>;
+  src: string;
+  alt: string;
+  top: string;
+  left: string;
+  rotate: string;
+  className: string;
 }
 
 const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate, src, top }) => {
   const [zIndex, setZIndex] = useState(0);
+
   const updateZIndex = () => {
     const els = document.querySelectorAll('.drag-elements');
 

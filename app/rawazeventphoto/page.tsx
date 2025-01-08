@@ -1,4 +1,4 @@
-'use client';
+"use client"
 
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -46,7 +46,7 @@ const RawazEventPhotoCards: React.FC = () => {
           rotate="-6deg"
           top="20%"
           left="40%"
-          className="w-52 md:w-80 lg:w-96 xl:w-112 2xl:w-128"
+          className="xl:w-112 2xl:w-128 w-52 md:w-80 lg:w-96"
         />
         <Card
           containerRef={containerRef}
@@ -55,7 +55,7 @@ const RawazEventPhotoCards: React.FC = () => {
           rotate="8deg"
           top="50%"
           left="40%"
-          className="w-48 md:w-72 lg:w-80 xl:w-96 2xl:w-112"
+          className="2xl:w-112 w-48 md:w-72 lg:w-80 xl:w-96"
         />
         <Card
           containerRef={containerRef}
@@ -109,16 +109,21 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
     setZIndex(maxZIndex + 1);
   };
 
+  const handleContextMenu = (event: React.MouseEvent) => {
+    event.preventDefault(); // Prevent the default context menu from appearing
+  };
+
   return (
     <motion.img
       onMouseDown={updateZIndex}
+      onContextMenu={handleContextMenu} // Add the context menu handler
       style={{
         top,
         left,
         rotate,
         zIndex,
       }}
-      className={twMerge('drag-elements absolute bg-neutral-200 p-1 pb-4', className)}
+      className={twMerge('drag-elements absolute bg-neutral-200 p-1 pb- 4', className)}
       src={src}
       alt={alt}
       drag

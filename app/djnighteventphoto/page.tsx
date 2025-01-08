@@ -110,9 +110,14 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
     setZIndex(maxZIndex + 1);
   };
 
+  const handleContextMenu = (event: React.MouseEvent) => {
+    event.preventDefault(); // Prevent the default context menu from appearing
+  };
+
   return (
     <motion.img
       onMouseDown={updateZIndex}
+      onContextMenu={handleContextMenu} // Add the context menu handler
       style={{
         top,
         left,
@@ -125,7 +130,7 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
       drag
       dragConstraints={containerRef}
       dragElastic={0.65}
- />
+    />
   );
 };
 
