@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
     <>
       <div>
         <HeroBackdrop />
-        <div className="bg-[#ffffec] relative z-40 w-full px-2 pt-[50px] md:px-2 lg:px-16 xl:px-[100px]">
+        <div className="relative z-40 w-full bg-[#ffffec] px-2 pt-[50px] md:px-2 lg:px-16 xl:px-[100px]">
           <section className="text-center leading-none">
             <p className={`text-lg md:text-xl lg:text-2xl ${fonts.funkyVibes.className}`}>Welcome to</p>
             <p className={`-mt-2 text-3xl md:text-4xl lg:text-[48px] ${fonts.funkyVibes.className}`}>North India</p>
@@ -156,9 +156,10 @@ export const Hero: React.FC = () => {
               </div>
             </motion.div>
           </section>
-
           <div className="my-3 flex flex-col items-start justify-between md:flex-row">
-            <div className="flex w-full flex-col md:w-1/2">
+            <div className="flex w-full flex-col md:w-1/2 md:pr-4">
+              {' '}
+              {/* Add padding to the right for spacing */}
               <motion.div
                 className={`curved-border text-center`}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -169,8 +170,8 @@ export const Hero: React.FC = () => {
                 <br />
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <iframe
-                    width="100%"
-                    height="315"
+                    width="80%"
+                    height="301"
                     src="https://www.youtube.com/embed/HVL4Fgel8S4?si=Cw06vipSycFKiymv"
                     title="YouTube video player"
                     frameBorder="0"
@@ -183,7 +184,9 @@ export const Hero: React.FC = () => {
               </motion.div>
             </div>
 
-            <div className="flex w-full flex-col md:w-1/2">
+            <div className="flex w-full flex-col md:w-1/2 md:pl-4">
+              {' '}
+              {/* Add padding to the left for spacing */}
               <motion.div
                 className={`curved-border text-center`}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -194,8 +197,8 @@ export const Hero: React.FC = () => {
                 <br />
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <iframe
-                    width="100%"
-                    height="304"
+                    width="80%"
+                    height="301"
                     src="https://www.youtube.com/embed/DyuUx1obJ_M?si=vErZx_7EbwskjJVo"
                     title="YouTube video player"
                     frameBorder="0"
@@ -208,7 +211,6 @@ export const Hero: React.FC = () => {
               </motion.div>
             </div>
           </div>
-
           <section className="text-center leading-none">
             <p className={`-mt-2 text-3xl md:text-4xl lg:text-[48px] ${fonts.funkyVibes.className}`}>west India</p>
           </section>
