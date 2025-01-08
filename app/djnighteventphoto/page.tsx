@@ -17,7 +17,7 @@ const DJNightEventPhototCards: React.FC = () => {
           alt="logo"
           width={2000}
           height={2000}
-          className="aspect-square w-[700px] object-cover opacity-40"
+          className="aspect-square w-[70vw] max-w-[700px] object-cover opacity-40"
         />
       </div>
       <div className="absolute inset-0 z-10" ref={containerRef}>
@@ -125,7 +125,7 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
       drag
       dragConstraints={containerRef}
       dragElastic={0.65}
-    />
+ />
   );
 };
 
