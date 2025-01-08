@@ -42,7 +42,7 @@ export const Loader: React.FC = () => {
             <p className="text-2xl font-bold uppercase text-white">Pravah 2025</p>
           </div>
 
-          <svg className="w-1/2 h-auto max-w-xs" viewBox="0 0 667 778" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="h-auto w-1/2 max-w-xs" viewBox="0 0 667 778" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.path
               initial={{ pathLength: 0 }}
               animate={{ pathLength: loaderProgress / 100 }}
