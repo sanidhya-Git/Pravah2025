@@ -5,16 +5,16 @@ import logo from '@/public/logo.png';
 export const Footer: React.FC = () => {
   return (
     <footer className="relative z-[50] border border-black bg-black py-10 text-white">
-      <div className="container mx-auto flex flex-col md:flex-row items-start justify-between px-4">
+      <div className="container mx-auto flex flex-col items-start justify-between px-4 md:flex-row">
         {/* Logo Section */}
-        <div className="flex flex-col items-start mb-6 md:mb-0">
+        <div className="mb-6 flex flex-col items-start md:mb-0">
           <Image src={logo} alt="Logo" width={150} height={50} className="mb-4" />
         </div>
 
         {/* Links Section */}
-        <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-32">
+        <div className="flex flex-col space-y-6 md:flex-row md:space-x-32 md:space-y-0">
           <div>
-            <h4 className="mb-2 font-serif font-bold text-lg md:text-xl">Quick Links</h4>
+            <h4 className="mb-2 font-serif text-lg font-bold md:text-xl">Quick Links</h4>
             <ul>
               <li>
                 <a href="#" className="font-semibold text-gray-300 hover:underline">
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h4 className="mb-2 font-serif font-bold text-lg md:text-xl">Help Desk</h4>
+            <h4 className="mb-2 font-serif text-lg font-bold md:text-xl">Help Desk</h4>
             <ul>
               <li>
                 <a href="#" className="font-semibold text-gray-300 hover:underline">
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h4 className="mb-2 font-serif font-bold text-lg md:text-xl">SOCIAL MEDIA</h4>
+            <h4 className="mb-2 font-serif text-lg font-bold md:text-xl">SOCIAL MEDIA</h4>
             <ul>
               <li>
                 <a
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h4 className="mb-2 font-serif font-bold text-lg md:text-xl">Contact Us</h4>
+            <h4 className="mb-2 font-serif text-lg font-bold md:text-xl">Contact Us</h4>
             <ul>
               <li>
                 <a href="#" className="font-semibold text-gray-300 hover:underline">
@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
                   Website Head
                 </a>
               </li>
-            </ ul>
+            </ul>
           </div>
         </div>
       </div>

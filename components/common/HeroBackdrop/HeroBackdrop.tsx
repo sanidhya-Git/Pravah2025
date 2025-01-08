@@ -49,8 +49,7 @@ export const HeroBackdrop: React.FC = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   // Videos
-  const videos = [
-    'https://res.cloudinary.com/dyggf8kxd/video/upload/v1733492155/pravah2_yhg5gx.mp4',
+  const videos = [    
     'https://res.cloudinary.com/dyggf8kxd/video/upload/v1733492157/pravah1_jnumef.mp4',
   ]; // Replace with your Cloudinary video URLs
 
