@@ -7,7 +7,6 @@ import { LoaderExitAnimationVariants } from '@/animation';
 
 export const Loader: React.FC = () => {
   const loaderProgress = useLoader(7, 300);
-
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
@@ -40,10 +39,10 @@ export const Loader: React.FC = () => {
           <div
             className={`${loaderProgress === 100 ? 'opacity-100' : 'opacity-0'} absolute bottom-8 left-1/2 -translate-x-1/2 duration-300`}
           >
-            <p className="$fonts.funkyVibes text-2xl font-bold uppercase text-white">Pravah 2025</p>
+            <p className="text-2xl font-bold uppercase text-white">Pravah 2025</p>
           </div>
 
-          <svg width="300" height="300" viewBox="0 0 667 778" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-1/2 h-auto max-w-xs" viewBox="0 0 667 778" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.path
               initial={{ pathLength: 0 }}
               animate={{ pathLength: loaderProgress / 100 }}

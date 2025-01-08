@@ -79,9 +79,9 @@ const CelebritySection: React.FC = () => {
   return (
     <section className="my-0 text-center">
       <h2 className={`text-5xl font-bold ${fonts.funkyVibes.className} mb-11`}>Prior-Celebrities</h2>
-      <div className="flex w-full items-center justify-center px-[20px]">
+      <div className="flex w-full items-center justify-center px-4 md:px-8 lg:px-16">
         <Swiper
-          slidesPerView={4}
+          slidesPerView={1} // Default for mobile
           spaceBetween={20}
           pagination={{
             dynamicBullets: true,
@@ -93,16 +93,27 @@ const CelebritySection: React.FC = () => {
           loop={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
+          breakpoints={{
+            640: {
+              slidesPerView: 2, // For small tablets
+            },
+            768: {
+              slidesPerView: 3, // For larger tablets
+            },
+            1024: {
+              slidesPerView: 4, // For desktops
+            },
+          }}
         >
           {celebrityImages.map((celebrityDetails, index) => (
-            <SwiperSlide key={index} className="pb-[30px]">
+            <SwiperSlide key={index} className="pb-8 md:pb-10 lg:pb-12">
               <div className="flex w-full justify-center">
                 <Image
                   src={celebrityDetails}
-                  alt={index.toString()}
-                  width={500}
-                  height={400}
-                  className="aspect-square w-[250px] rounded-full object-cover object-top"
+                  alt={`Celebrity ${index + 1}`} // More descriptive alt text
+                  width={250} // Adjusted for responsive design
+                  height={250} // Adjusted for responsive design
+                  className="aspect-square w-full max-w-[250px] rounded-full object-cover object-top"
                 />
               </div>
             </SwiperSlide>
@@ -166,9 +177,9 @@ export const Hero: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className={`text-4xl font-bold ${fonts.funkyVibes.className}`}>Logo Reveal</h2>
+                <h2 className={`text-4xl font-bold ${fonts.funkyVibes.className}`}>Theme Reveal</h2>
                 <br />
-                <div className="overflow-hidden rounded-lg ">
+                <div className="overflow-hidden rounded-lg">
                   <iframe
                     width="80%"
                     height="301"
@@ -195,7 +206,7 @@ export const Hero: React.FC = () => {
               >
                 <h2 className={`text-4xl font-bold ${fonts.funkyVibes.className}`}>Logo Reveal</h2>
                 <br />
-                <div className="overflow-hidden rounded-lg ">
+                <div className="overflow-hidden rounded-lg">
                   <iframe
                     width="80%"
                     height="301"
@@ -351,7 +362,7 @@ export const Hero: React.FC = () => {
             <Card
               i={1}
               title="Thirak"
-              description="This is the content of the card."
+              description="The content of Thirak."
               src={cultural_photos.seventeen}
               url="thirakeventphoto"
               color="#FFF5EB"
@@ -361,7 +372,7 @@ export const Hero: React.FC = () => {
             <Card
               i={1}
               title="Sur"
-              description="This is the content of the card."
+              description="The content of SUR."
               src={cultural_photos.sixteen}
               url="sureventphoto"
               color="#FFEBD6"
@@ -371,7 +382,7 @@ export const Hero: React.FC = () => {
             <Card
               i={1}
               title="Rawaz"
-              description="This is the content of the card."
+              description="The content of Rawaz."
               src={cultural_photos.fifteen}
               url="rawazeventphoto"
               color="#FFE0C2"
@@ -381,7 +392,7 @@ export const Hero: React.FC = () => {
             <Card
               i={1}
               title="Celebrity Night"
-              description="This is the content of the card."
+              description="The content of Celebrity Night."
               src={cultural_photos.thirteen}
               url="celebiritynighteventphoto"
               color="#FFD6AD"
@@ -391,7 +402,7 @@ export const Hero: React.FC = () => {
             <Card
               i={1}
               title="DJ Night"
-              description="This is the content of the card."
+              description="The content of the DJ Night."
               src={cultural_photos.fourteen}
               url="djnighteventphoto"
               color="#FFCC99"
