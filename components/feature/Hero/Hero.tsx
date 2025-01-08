@@ -120,7 +120,7 @@ export const Hero: React.FC = () => {
     <>
       <div>
         <HeroBackdrop />
-        <div className="bg-[#ffff ec] relative z-40 w-full px-2 pt-[50px] md:px-2 lg:px-16 xl:px-[100px]">
+        <div className="bg-[#ffffec] relative z-40 w-full px-2 pt-[50px] md:px-2 lg:px-16 xl:px-[100px]">
           <section className="text-center leading-none">
             <p className={`text-lg md:text-xl lg:text-2xl ${fonts.funkyVibes.className}`}>Welcome to</p>
             <p className={`-mt-2 text-3xl md:text-4xl lg:text-[48px] ${fonts.funkyVibes.className}`}>North India</p>
