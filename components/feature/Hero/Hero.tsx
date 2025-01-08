@@ -168,7 +168,7 @@ export const Hero: React.FC = () => {
               >
                 <h2 className={`text-4xl font-bold ${fonts.funkyVibes.className}`}>Logo Reveal</h2>
                 <br />
-                <div className="overflow-hidden rounded-lg shadow-lg">
+                <div className="overflow-hidden rounded-lg ">
                   <iframe
                     width="80%"
                     height="301"
@@ -195,7 +195,7 @@ export const Hero: React.FC = () => {
               >
                 <h2 className={`text-4xl font-bold ${fonts.funkyVibes.className}`}>Logo Reveal</h2>
                 <br />
-                <div className="overflow-hidden rounded-lg shadow-lg">
+                <div className="overflow-hidden rounded-lg ">
                   <iframe
                     width="80%"
                     height="301"
