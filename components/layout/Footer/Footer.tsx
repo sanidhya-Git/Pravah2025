@@ -117,7 +117,7 @@ export const Footer: React.FC = () => {
         </div>
       </div>
       <div className="mt-10 text-center">
-        <p className="text-gray-400">Developed and designed by Pravah WebTeam. </p>
+        <p className="text-gray-400">Developed and designed by Sanidhya Mehra , Krishna Wadhwa. </p>
       </div>
     </footer>
   );
