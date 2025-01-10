@@ -169,9 +169,63 @@
       }
 
       .imageContainer {
-        width: 60%; // Original width
-        height: 100%; // Original height
+        width: 60% ; // Original width
+        height: 100% ; // Original height
       }
+    }
+  }
+}
+
+/* Additional Media Query for devices less than 600px */
+@media (max-width: 599px) {
+  .cardContainer {
+    height: auto; // Allow height to adjust
+    padding: 5px; // Minimal padding for smaller screens
+  }
+
+  .card {
+    height: auto; // Allow height to adjust
+    width: 100%; // Full width
+    padding: 15px; // Further reduce padding
+    
+    h2 {
+      font-size: 22px; // Smaller font size for very small screens
+    }
+
+    .body {
+      flex-direction: column; // Stack description and image
+      gap: 15px; // Adjust gap for smaller screens
+      
+      .description {
+        width: 100%; // Full width
+        position: static; // Reset position
+        top: 0; // Reset top
+      }
+
+      .imageContainer {
+        width: 100%; // Full width
+        height: 150px; // Fixed height for images
+      }
+      p {
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    
+        &::first-letter {
+          font-size: 24px; /* Adjusted first letter size */
+          font-family: 'Title';
+        }
+      }
+    
+      span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    
+        a {
+          font-size: 10px; /* Adjusted link font size */
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }    
     }
   }
 }

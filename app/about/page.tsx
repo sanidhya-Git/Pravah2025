@@ -3,12 +3,10 @@ import './About.css';
 import Image from 'next/image';
 import { logo } from '@/public';
 import { fonts } from '@/fonts';
+
 const Hero = () => {
   return (
-    <div
-      className="all bg-[#ffffec] p-8"
-      // style={{backgroundImage: "url('/logo.png')", }}
-    >
+    <div className="all bg-[#ffffec] p-8">
       <div className="fixed left-0 top-0 z-10 flex h-screen w-full items-center justify-center">
         <Image
           src={logo}
@@ -21,7 +19,9 @@ const Hero = () => {
 
       <div className="relative z-30">
         <div className="hero">
-          <h1 className={`text-5xl font-bold ${fonts.funkyVibes.className} mb-11`}>Annual Techno Cultural Fest</h1>
+          <h1 className={`${fonts.funkyVibes.className} text-5xl font-bold mb-11`}>
+            Annual Techno Cultural Fest
+          </h1>
           <h2 className="hero-subtitle">Pravah 2025</h2>
           <p className="hero-description font-semibold">
             PRAVAH, the Annual College Fest, embodies the realization of a modest dream. This vibrant extravaganza has
@@ -40,8 +40,8 @@ const Hero = () => {
         {/* about.jss  */}
 
         <div className="about">
-          <h2 className={`text-xs ${fonts.funkyVibes.className} about-subTitle mb-0`}>About SKIT</h2>
-          <h1 className={`about-subTitle mb-11 text-5xl`}>SKIT, Jaipur</h1>
+          <h2 className={`${fonts.funkyVibes.className} text-xs about-subTitle mb-0`}>About SKIT</h2>
+          <h1 className="about-subTitle mb-11 text-5xl">SKIT, Jaipur</h1>
           <p className="about-description font-semibold">
             Inspired by the timeless wisdom of Swami Keshvanand, embarked on its academic journey in the year 2000,
             thanks to the visionaries at the Technocrats and Managers Society of Advanced Learning and Gramothan.SKIT
@@ -64,7 +64,7 @@ const Hero = () => {
   );
 };
 
-function VisionCard() {
+const VisionCard = () => {
   return (
     <div className="card">
       <h2 className="card-title">VISION</h2>
@@ -76,9 +76,9 @@ function VisionCard() {
       </p>
     </div>
   );
-}
+};
 
-function MissionCard() {
+const MissionCard = () => {
   return (
     <div className="card">
       <h2 className="card-title">MISSION</h2>
@@ -90,9 +90,9 @@ function MissionCard() {
       </p>
     </div>
   );
-}
+};
 
-function ObjectivesCard() {
+const ObjectivesCard = () => {
   return (
     <div className="card">
       <h2 className="card-title">OBJECTIVES</h2>
@@ -104,6 +104,7 @@ function ObjectivesCard() {
       </p>
     </div>
   );
-}
+};
 
 export default Hero;
+
