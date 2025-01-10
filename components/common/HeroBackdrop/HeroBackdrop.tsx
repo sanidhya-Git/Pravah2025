@@ -60,7 +60,7 @@ export const HeroBackdrop: React.FC = () => {
 
   return (
     <>
-    {/* bkbkbf */}
+      {/* bkbkbf */}
       <div
         ref={container}
         onClick={() => {
@@ -70,9 +70,7 @@ export const HeroBackdrop: React.FC = () => {
         className="relative z-[30] flex h-screen w-screen items-center justify-center overflow-hidden"
       >
         {/* Logo */}
-        <div className="absolute left-4 top-1 z-50 sm:left-2 sm:top-2 md:left-4 md:top-4">
-          <Image src={logo} alt="Logo" width={120} height={100} className="h-auto max-h-full w-auto max-w-full" />
-        </div>
+        <div className="absolute left-4 top-1 z-50"> <Image src={logo} alt="Logo" width={120} height={100} /> </div>
 
         {/* Sky */}
         <Image
