@@ -181,7 +181,6 @@ export const Hero: React.FC = () => {
           </section>
           <div className="my-3 flex flex-col items-start justify-between md:flex-row">
             <div className="mb-4 flex w-full flex-col md:mb-0 md:w-1/2 md:pr-4">
-              
               {/* Add margin-bottom for spacing */}
               <motion.div
                 className={`curved-border text-center`}
