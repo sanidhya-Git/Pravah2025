@@ -52,7 +52,7 @@ export const HeroBackdrop: React.FC = () => {
   const videos = ['https://res.cloudinary.com/dyggf8kxd/video/upload/v1733492157/pravah1_jnumef.mp4']; // Replace with your Cloudinary video URLs
 
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const handleVideoChange = () => {
     setCurrentVideo((prev) => (prev === 0 ? 1 : 0));
@@ -66,11 +66,11 @@ export const HeroBackdrop: React.FC = () => {
           setShowVideo(true);
           setIsPlaying(true);
         }}
-        className="relative z-[30] flex h-screen w-full items-center justify-center overflow-hidden"
+        className="relative z-[30] flex h-screen w-screen items-center justify-center overflow-hidden"
       >
         {/* Logo */}
-        <div className="absolute left-4 top-1 z-50">
-          <Image src={logo} alt="Logo" width={120} height={100} />
+        <div className="absolute left-4 top-1 z-50 sm:left-2 sm:top-2 md:left-4 md:top-4">
+          <Image src={logo} alt="Logo" width={120} height={100} className="h-auto max-h-full w-auto max-w-full" />
         </div>
 
         {/* Sky */}

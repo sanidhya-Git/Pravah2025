@@ -180,9 +180,9 @@ export const Hero: React.FC = () => {
             </motion.div>
           </section>
           <div className="my-3 flex flex-col items-start justify-between md:flex-row">
-            <div className="flex w-full flex-col md:w-1/2 md:pr-4">
-              {' '}
-              {/* Add padding to the right for spacing */}
+            <div className="mb-4 flex w-full flex-col md:mb-0 md:w-1/2 md:pr-4">
+              
+              {/* Add margin-bottom for spacing */}
               <motion.div
                 className={`curved-border text-center`}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -193,8 +193,8 @@ export const Hero: React.FC = () => {
                 <br />
                 <div className="overflow-hidden rounded-lg">
                   <iframe
-                    width="80%"
-                    height="301"
+                    width="100%"
+                    height="300"
                     src="https://www.youtube.com/embed/HVL4Fgel8S4?si=Cw06vipSycFKiymv"
                     title="YouTube video player"
                     frameBorder="0"
@@ -208,8 +208,6 @@ export const Hero: React.FC = () => {
             </div>
 
             <div className="flex w-full flex-col md:w-1/2 md:pl-4">
-              {' '}
-              {/* Add padding to the left for spacing */}
               <motion.div
                 className={`curved-border text-center`}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -220,8 +218,8 @@ export const Hero: React.FC = () => {
                 <br />
                 <div className="overflow-hidden rounded-lg">
                   <iframe
-                    width="80%"
-                    height="301"
+                    width="100%"
+                    height="300"
                     src="https://www.youtube.com/embed/DyuUx1obJ_M?si=vErZx_7EbwskjJVo"
                     title="YouTube video player"
                     frameBorder="0"
