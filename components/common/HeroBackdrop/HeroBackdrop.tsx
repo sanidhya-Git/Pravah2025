@@ -99,7 +99,7 @@ export const HeroBackdrop: React.FC = () => {
 
         <div
           ref={pravah_ref}
-          className="w [500px] absolute left-[50%] top-[100px] -translate-x-1/2 text-center leading-none text-[#476b7f]"
+          className="w-[500px] absolute left-[50%] top-[100px] -translate-x-1/2 text-center leading-none text-[#476b7f]"
         >
           <p className={`text-center ${fonts.funkyVibes.className} text-[120px] sm:text-[80px] md:text-[100px]`}>
             Pravah
@@ -160,3 +160,4 @@ export const HeroBackdrop: React.FC = () => {
     </>
   );
 };
+
