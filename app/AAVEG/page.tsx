@@ -9,8 +9,11 @@ import { fonts } from '@/fonts';
 
 const CardSplit = () => {
   useEffect(() => {
-    // Initialize Splitting.js
-    Splitting();
+    // Check if the window object is defined (i.e., we're in the browser)
+    if (typeof window !== 'undefined') {
+      // Initialize Splitting.js
+      Splitting();
+    }
   }, []);
 
   // Data for cards
@@ -95,14 +98,13 @@ const CardSplit = () => {
     <main id="main">
       <h1 className={`${fonts.funkyVibes.className} mb-11 text-5xl font-bold`}>AAVEG&apos;25</h1>
       <p className="title">
-        Welcome to AAVEG&apos;25!! One of the largest sports events in Jaipur is back with its 25th edition this February,
-        that unites the vibrant spirit of the students through the thrill of sports. The annual sports fest of SKIT
-        signifies a platform which encourages its participants to face challenges with courage, unwavering
+        Welcome to AAVEG&apos;25!! One of the largest sports events in Jaipur is back with its 25th edition this
+        February, that unites the vibrant spirit of the students through the thrill of sports. The annual sports fest of
+        SKIT signifies a platform which encourages its participants to face challenges with courage, unwavering
         determination, perseverance and showcasing their sportsmanship. With an addition of celebrating the triumphs
         over setbacks. So get ready to feel the adrenaline rush over the thrilling faces and prove your mettle at the
         sports extravaganza.
       </p>
-      <div></div>
       <div className="card-grid">
         {/* Dynamically render cards */}
         {cardsData.map((card, index) => (
@@ -115,7 +117,6 @@ const CardSplit = () => {
           </div>
         ))}
       </div>
-      {/* </div> */}
     </main>
   );
 };
