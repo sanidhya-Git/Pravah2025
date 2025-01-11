@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import './aaveg.css';
 import 'splitting/dist/splitting.css';
 import Splitting from 'splitting';
-import Image from 'next/image';
+import Image from 'next/image'; // Uncomment this line
 
 import { fonts } from '@/fonts';
 
@@ -93,9 +93,9 @@ const CardSplit = () => {
 
   return (
     <main id="main">
-      <h1 className={`${fonts.funkyVibes.className} mb-11 text-5xl font-bold`}>AAVEG'25</h1>
+      <h1 className={`${fonts.funkyVibes.className} mb-11 text-5xl font-bold`}>AAVEG&apos;25</h1>
       <p className="title">
-        Welcome to AAVEG'25!! One of the largest sports events in Jaipur is back with its 25th edition this February,
+        Welcome to AAVEG&apos;25!! One of the largest sports events in Jaipur is back with its 25th edition this February,
         that unites the vibrant spirit of the students through the thrill of sports. The annual sports fest of SKIT
         signifies a platform which encourages its participants to face challenges with courage, unwavering
         determination, perseverance and showcasing their sportsmanship. With an addition of celebrating the triumphs
@@ -107,7 +107,7 @@ const CardSplit = () => {
         {/* Dynamically render cards */}
         {cardsData.map((card, index) => (
           <div className="card" tabIndex={0} key={index}>
-            <img src={card.image} alt={card.title} />
+            <Image src={card.image} alt={card.title} layout="responsive" width={500} height={300} />
             <div className="text">
               <h2 data-splitting="">{card.title}</h2>
               <p data-splitting="">{card.description}</p>
