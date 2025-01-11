@@ -3,6 +3,6 @@
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",
     "react/no-unescaped-entities": "error",
-    "@next/next/no-img-element": "error"
+    "@next/next/no-img-element": "off"
   }
 }

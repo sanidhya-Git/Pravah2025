@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
       title: 'Quick Links',
       links: [
         { label: 'Team Pravah', href: '#' },
-        { label: 'AAVEG', href: '/AAVEG' },
+        { label: 'AAVEG', href: '/aveg' },
         { label: 'EVENTS', href: '#' },
         { label: 'About', href: '/about' },
       ],
