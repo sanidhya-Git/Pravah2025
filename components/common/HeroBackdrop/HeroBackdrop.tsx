@@ -70,7 +70,10 @@ export const HeroBackdrop: React.FC = () => {
         className="relative z-[30] flex h-screen w-screen items-center justify-center overflow-hidden"
       >
         {/* Logo */}
-        <div className="absolute left-4 top-1 z-50"> <Image src={logo} alt="Logo" width={120} height={100} /> </div>
+        <div className="absolute left-4 top-1 z-50">
+          {' '}
+          <Image src={logo} alt="Logo" width={120} height={100} />{' '}
+        </div>
 
         {/* Sky */}
         <Image

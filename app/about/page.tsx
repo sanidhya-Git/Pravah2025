@@ -19,9 +19,7 @@ const Hero = () => {
 
       <div className="relative z-30">
         <div className="hero">
-          <h1 className={`${fonts.funkyVibes.className} text-5xl font-bold mb-11`}>
-            Annual Techno Cultural Fest
-          </h1>
+          <h1 className={`${fonts.funkyVibes.className} mb-11 text-5xl font-bold`}>Annual Techno Cultural Fest</h1>
           <h2 className="hero-subtitle">Pravah 2025</h2>
           <p className="hero-description font-semibold">
             PRAVAH, the Annual College Fest, embodies the realization of a modest dream. This vibrant extravaganza has
@@ -40,7 +38,7 @@ const Hero = () => {
         {/* about.jss  */}
 
         <div className="about">
-          <h2 className={`${fonts.funkyVibes.className} text-xs about-subTitle mb-0`}>About SKIT</h2>
+          <h2 className={`${fonts.funkyVibes.className} about-subTitle mb-0 text-xs`}>About SKIT</h2>
           <h1 className="about-subTitle mb-11 text-5xl">SKIT, Jaipur</h1>
           <p className="about-description font-semibold">
             Inspired by the timeless wisdom of Swami Keshvanand, embarked on its academic journey in the year 2000,
@@ -107,4 +105,3 @@ const ObjectivesCard = () => {
 };
 
 export default Hero;
-

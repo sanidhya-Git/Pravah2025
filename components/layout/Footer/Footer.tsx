@@ -16,7 +16,6 @@ export const Footer: React.FC = () => {
     {
       title: 'Help Desk',
       links: [
-
         { label: 'Accommodation', href: '#' },
         { label: 'Bug Report', href: '#' },
         { label: 'Web Team', href: '#' },
@@ -70,4 +69,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-
