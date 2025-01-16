@@ -4,7 +4,7 @@ import { useGotoMap } from '@/global/stateHooks';
 import React from 'react';
 
 // shadcn components
-import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui';
+import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle } from '@/components/ui';
 import { MapAreaMenu, MapSectionData } from './data';
 import { motion } from 'framer-motion';
 import { fonts } from '@/fonts';
@@ -45,32 +45,35 @@ export const GotoMap: React.FC = () => {
           <p className="rounded-full px-4 py-2 text-[12px] uppercase text-white">Menu</p>
         </DrawerTrigger>
         <DrawerContent>
-          <div className="grid h-[200px] w-full grid-cols-5 gap-5 p-5">
-            {MapSectionData.map((section, index) => (
-              <div
-                key={index}
-                className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-200 p-5"
-                onClick={() => {
-                  setMapArea(section.slug);
-                }}
-              >
-                <div className="absolute left-0 top-0 h-full w-full bg-black">
-                  <Image
-                    src={section.backgroundimage}
-                    alt={section.text}
-                    layout="fill"
-                    objectFit="cover"
-                    className="object-top opacity-50"
-                  />
-                </div>
-                <p
-                  className={`relative z-10 text-sm font-semibold uppercase text-white ${section.slug === mapArea && 'underline'}`}
+          <>
+            <DrawerTitle></DrawerTitle>
+            <div className="grid h-[200px] w-full grid-cols-5 gap-5 p-5">
+              {MapSectionData.map((section, index) => (
+                <div
+                  key={index}
+                  className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-200 p-5"
+                  onClick={() => {
+                    setMapArea(section.slug);
+                  }}
                 >
-                  {section.text}
-                </p>
-              </div>
-            ))}
-          </div>
+                  <div className="absolute left-0 top-0 h-full w-full bg-black">
+                    <Image
+                      src={section.backgroundimage}
+                      alt={section.text}
+                      layout="fill"
+                      objectFit="cover"
+                      className="object-top opacity-50"
+                    />
+                  </div>
+                  <p
+                    className={`relative z-10 text-sm font-semibold uppercase text-white ${section.slug === mapArea && 'underline'}`}
+                  >
+                    {section.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </>
         </DrawerContent>
       </Drawer>
     </>
