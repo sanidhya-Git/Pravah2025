@@ -1,0 +1,68 @@
+/* Global Styles */
+
+.gallery-container {
+    height: 300vh;
+  }
+  
+  .gallery-container .sticky {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .gallery-container .sticky .image-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .gallery-container .sticky .image-container .image {
+    position: relative;
+    height: 25vh;
+    width: 25vw;
+  }
+  
+  /* Media Queries */
+  
+  /* For 367px */
+  @media only screen and (max-width: 367px) {
+    .gallery-container .sticky .image-container .image {
+      height: 20vh;
+      width: 30vw;
+    }
+  }
+  
+  /* For Mobile Devices */
+  @media only screen and (max-width: 768px) {
+    .gallery-container .sticky .image-container .image {
+      height: 25vh;
+      width: 40vw;
+    }
+  }
+  
+  /* For Tablet Devices */
+  @media only screen and (max-width: 1024px) {
+    .gallery-container .sticky .image-container .image {
+      height: 20vh;
+      width: 30vw;
+    }
+  }
+  
+  /* For Desktop Devices */
+  @media only screen and (max-width: 1200px) {
+    .gallery-container .sticky .image-container .image {
+      height: 25vh;
+      width: 25vw;
+    }
+  }
+  
+  /* For Large Desktop Devices */
+  @media only screen and (max-width: 1600px) {
+    .gallery-container .sticky .image-container .image {
+      height: 30vh;
+      width: 30vw;
+    }
+  }

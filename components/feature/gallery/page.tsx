@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { cultural_photos } from '@/public';
+import './page.css'
 
 export const GalleryTwo = () => {
   const container = useRef(null);

@@ -1,13 +1,11 @@
-"use client";
+'use client';
 
 import React from 'react';
 import './style.css';
 
-
 import { fonts } from '../../fonts/index'; // Corrected import statement
 
 const CardSplit = () => {
-
   const cardsData = [
     {
       image: 'https://t3.ftcdn.net/jpg/03/10/62/12/360_F_310621281_foEqKBGtGlNWFQRePgdF5BpLOFyTsnzO.jpg',
