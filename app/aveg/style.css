@@ -1,4 +1,3 @@
-/*************  ✨ Codeium Command 🌟  *************/
 
   
   .card {
@@ -123,7 +122,7 @@
     justify-content: center;
     width: 100%;
   }
-  .card-grid{
+  .cardd-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 equal columns */
     grid-template-columns: repeat(4, 1fr); /* 3 equal columns */
@@ -132,13 +131,13 @@
   }
   /* App.css */
   @media screen and (max-width: 768px) {
-    .card-grid {
+    .cardd-grid {
       grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
     }
   }
   
   @media screen and (max-width: 480px) {
-    .card-grid {
+    .cardd-grid {
       grid-template-columns: 1fr; /* 1 card per row on very small screens */
     }
   }
@@ -276,4 +275,3 @@
       grid-column: 1 / 3;
     }
   }
-/******  f2467acd-63b3-4944-9ed7-74ff6af22bc5  *******/

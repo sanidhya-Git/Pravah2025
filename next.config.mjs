@@ -18,8 +18,8 @@ const nextConfig = {
         hostname: 'cloudinary.com',
       },
       {
-      protocol: 'https',
-      hostname:'c1.wallpaperflare.com'
+        protocol: 'https',
+        hostname: 'c1.wallpaperflare.com',
       },
       {
         protocol: 'https',

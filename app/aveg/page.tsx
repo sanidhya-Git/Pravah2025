@@ -1,20 +1,13 @@
-'use client';
+"use client";
+
 import React from 'react';
 import './style.css';
-// import 'splitting/dist/splitting.css';
-// import Splitting from 'splitting';
+
 
 import { fonts } from '../../fonts/index'; // Corrected import statement
 
 const CardSplit = () => {
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     // Initialize Splitting.js only in the browser
-  //     Splitting();
-  //   }
-  // }, []);
 
-  // Data for cards
   const cardsData = [
     {
       image: 'https://t3.ftcdn.net/jpg/03/10/62/12/360_F_310621281_foEqKBGtGlNWFQRePgdF5BpLOFyTsnzO.jpg',
@@ -93,7 +86,7 @@ const CardSplit = () => {
   ];
 
   return (
-    <main id="main">
+    <main id="  ">
       <h1 className={`${fonts.funkyVibes.className} mb-11 text-5xl font-bold`}>AAVEG&apos;25</h1>
       <p className="title">
         Welcome to AAVEG&apos;25!! One of the largest sports events in Jaipur is back with its 25th edition this
@@ -104,7 +97,7 @@ const CardSplit = () => {
         sports extravaganza.
       </p>
       <div></div>
-      <div className="card-grid">
+      <div className="cardd-grid">
         {/* Dynamically render cards */}
         {cardsData.map((card, index) => (
           <div className="card" tabIndex={0} key={index}>

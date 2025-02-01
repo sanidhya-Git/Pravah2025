@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative z-[50] border border-black bg-black py-10 text-white">
+    <footer className="relative z-[50] border border-black bg-black py-20 text-white">
       <div className="container mx-auto flex flex-col items-start justify-between px-4 md:flex-row">
         <div className="mb-6 flex flex-col items-start md:mb-0">
           <Image src={logo} alt="Logo" width={150} height={50} className="mb-4" />
@@ -64,8 +64,17 @@ export const Footer: React.FC = () => {
         </div>
       </div>
       <div className="mt-10 text-center">
-        <p className="text-gray-400">Developed and designed by Sanidhya Mehra, Krishna Wadhwa.</p>
-      </div>
+  <p className="text-gray-400">
+    Developed and designed by &nbsp;
+    <a href="https://www.linkedin.com/in/sanidhyamehra" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600">
+      Sanidhya Mehra
+    </a>&nbsp;,&nbsp; 
+    <a href="https://www.linkedin.com/in/krishnawadhwa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600">
+      Krishna Wadhwa
+    </a>.
+  </p>
+</div>
+
     </footer>
   );
 };
