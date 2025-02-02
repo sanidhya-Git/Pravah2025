@@ -1,151 +1,210 @@
+/* Hero Section */
 .hero {
-    animation: fadeIn 1s ease-in-out;
-    text-align: center;
-  }
-  
-  .hero-title {
-    /* font-size: 1.5rem;
-    margin-bottom: 0;
-    font-weight: 450;
-    text-decoration: solid; */
-    font-size: 1.1rem;
-    margin-bottom: 0%; 
-    font-weight:bolder;
-   
-  }
-  
-  .hero-subtitle {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    margin-top: 0%;
-    font-weight: bolder;
-    text-decoration:solid;
-  }
-  
-  .hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    margin-left: 150px;
-    margin-right: 150px;
-    font-weight: 350;
-    text-align: center;
-  }
-  
-  .hero-cta {
-    background: rgb(0, 0, 19);
-    color: #fff;
-    border: none;
-    padding: 0.7rem 1rem;
-    font-size: 0.9rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color  ease-in-out;
-    margin-bottom: 0.5rem;
-    font-weight: bolder;
-  }
-  
-  /* .hero-cta:hover {
-    background: linear-gradient(90deg, rgb(4, 4, 90) 0%, rgba(9,9,121,1) 64%, rgba(0,212,255,1) 100%);
-  } */
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+}
 
-  /* about css */
-  .about {
-    padding: 4rem 2rem;
-    animation: slideInLeft 1s ease-in-out;
-    text-align: center;
-    margin-top: 0%;
-    margin-bottom: 0%;
+.hero-title {
+  font-size: 1.1rem;
+  margin-bottom: 0%;
+  font-weight: bolder;
+}
+
+.hero-subtitle {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 0%;
+  font-weight: bolder;
+  text-decoration: solid;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-weight: 350;
+  text-align: center;
+}
+
+.hero-cta {
+  background: rgb(0, 0, 19);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color ease-in-out;
+  margin-bottom: 0.5rem;
+  font-weight: bolder;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 2rem;
+  animation: slideInLeft 1s ease-in-out;
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.about-title {
+  font-size: 1.1rem;
+  margin-bottom: 0%;
+  font-weight: bolder;
+}
+
+.about-subTitle {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 0%;
+  font-weight: bolder;
+  text-decoration: solid;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-weight: 350;
+  text-align: center;
+}
+
+/* Card Section */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 0%;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.card-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 0%;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.card-content {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  overflow-y: auto;
+  padding-right: 1rem; /* Add some padding to the right for the scrollbar */
+  margin-bottom: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Scrollbar styles */
+.card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .hero-subtitle {
+    font-size: 3rem; /* Adjust font size for medium screens */
   }
-  
-  .about-title {
-    font-size: 1.1rem;
-    margin-bottom: 0%; 
-    font-weight:bolder;
-  }
-  .about-subTitle{
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    margin-top: 0%;
-    font-weight: bolder;
-    text-decoration:solid;
-    margin-top: 0%;
-  }
-  
+
+  .hero-description,
   .about-description {
-    font-size: 1.1rem;
-    /* margin-bottom: 2rem; */
-    margin-left: 150px;
-    margin-right: 150px;
-    font-weight: 350;
-    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
   }
-/*card css */
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    margin-top: 0%;
-    @media (max-width: 768px) {
-        gap: 1rem;
-      }
-    
-      @media (max-width: 480px) {
-        .card {
-          width: 100%;
-        }
-      }
+
+  .about-subTitle {
+    font-size: 3rem;
   }
-  
+
   .card {
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    padding: 1.5rem;
-    overflow-y: auto;
-    max-height: 300px;
+    width: 80%; /* Adjust width for medium screens */
   }
-  
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 2.5rem; /* Adjust font size for small screens */
+  }
+
+  .hero-description,
+  .about-description {
+    font-size: 1rem; /* Adjust font size for better readability */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .about-subTitle {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 90%; /* Full width for mobile screens */
+  }
+
   .card-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-weight: bolder;
-    margin-top:0%;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
+    font-size: 2rem; /* Adjust card title size */
   }
-  
+
   .card-content {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    overflow-y: auto;
-    padding-right: 1rem; /* Add some padding to the right for the scrollbar */
-    margin-bottom:10px;
-    font-weight: 400;
-    text-align: center;
+    font-size: 1rem; /* Adjust card content size */
   }
-  
-  /* Scrollbar styles */
-  .card::-webkit-scrollbar {
-    width: 8px;
+}
+
+@media (max-width: 480px) {
+  .hero-subtitle {
+    font-size: 2rem; /* Further adjust for very small screens */
   }
-  
-  .card::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 4px;
+
+  .hero-description,
+  .about-description {
+    font-size: 0.9rem; /* Further adjust for very small screens */
   }
-  
-  .card::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
+
+  .about-subTitle {
+    font-size: 1.5rem;
   }
-  
-  .card::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+
+  .card {
+    width: 100%; /* Full width for very small screens */
   }
-  
+
+  .card-title {
+    font-size: 1.5rem; /* Further adjust card title size */
+  }
+
+  .card-content {
+    font-size: 0.9rem; /* Further adjust card content size */
+  }
+}

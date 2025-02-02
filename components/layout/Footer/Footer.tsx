@@ -63,6 +63,7 @@ export const Footer: React.FC = () => {
           ))}
         </div>
       </div>
+      <div className='ffoter'>
       <div className="mt-10 text-center">
         <p className="text-gray-400">
           Developed and designed by &nbsp;
@@ -85,6 +86,7 @@ export const Footer: React.FC = () => {
           </a>
           .
         </p>
+      </div>
       </div>
     </footer>
   );
