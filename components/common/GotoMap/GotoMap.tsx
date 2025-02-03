@@ -25,7 +25,7 @@ export const GotoMap: React.FC = () => {
                   <p key={index}>
                     <Link
                       href={link.href}
-                      className={`${fonts.funkyVibes.className} text-center text-[32px] md:text-[48px] text-white`}
+                      className={`${fonts.funkyVibes.className} text-center text-[32px] text-white md:text-[48px]`}
                     >
                       {link.label}
                     </Link>
@@ -47,7 +47,7 @@ export const GotoMap: React.FC = () => {
         <DrawerContent>
           <>
             <DrawerTitle></DrawerTitle>
-            <div className="grid h-[300px] w-full grid-cols-2 gap-4 p-4 md:grid-cols-5 md:h-[200px]">
+            <div className="grid h-[300px] w-full grid-cols-2 gap-4 p-4 md:h-[200px] md:grid-cols-5">
               {MapSectionData.map((section, index) => (
                 <div
                   key={index}
@@ -66,7 +66,7 @@ export const GotoMap: React.FC = () => {
                     />
                   </div>
                   <p
-                    className={`relative z-10 text-xs md:text-sm font-semibold uppercase text-white ${section.slug === mapArea && 'underline'}`}
+                    className={`relative z-10 text-xs font-semibold uppercase text-white md:text-sm ${section.slug === mapArea && 'underline'}`}
                   >
                     {section.text}
                   </p>
