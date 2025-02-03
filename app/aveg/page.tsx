@@ -39,7 +39,8 @@ const CardSplit = () => {
         'Jump into the action of volleyball and spike your way to victory with powerful serves and perfect teamwork!',
     },
     {
-      image: 'https://img.freepik.com/free-photo/superheroes-are-playing-baseball-3d-rendered-illustration_1057-32197.jpg?t=st=1738521692~exp=1738525292~hmac=300f45c29174cd99caed71e90e57c882998da61430d6654fec814dcf70d88e32&w=740',
+      image:
+        'https://img.freepik.com/free-photo/superheroes-are-playing-baseball-3d-rendered-illustration_1057-32197.jpg?t=st=1738521692~exp=1738525292~hmac=300f45c29174cd99caed71e90e57c882998da61430d6654fec814dcf70d88e32&w=740',
       title: 'Gully Cricket',
       description: 'Join the thrilling basketball matches and cheer for your favorite teams!',
     },
@@ -54,7 +55,7 @@ const CardSplit = () => {
       title: 'Table Tennis',
       description:
         'Get ready for a fast-paced game of table tennis and master your reflexes to outplay your opponent with every swift rally!',
-    },    
+    },
     {
       image: 'https://c1.wallpaperflare.com/preview/317/826/447/dew-tug-of-war-drag-men.jpg',
       title: 'Tug of War',
@@ -66,7 +67,7 @@ const CardSplit = () => {
       title: 'Satoliya',
       description:
         'Join the ultimate test of strength and teamwork in tug of war, where every pull counts towards victory!',
-    },    
+    },
     {
       image: 'https://149853888.v2.pressablecdn.com/wp-content/uploads/2020/04/carrom-390956_1920.jpg',
       title: 'Carrom',
@@ -74,11 +75,12 @@ const CardSplit = () => {
         'Get ready for a fun-filled game of carrom and showcase your skills to sink the coins with precision and finesse!',
     },
     {
-      image: 'https://img.freepik.com/free-photo/professional-esports-gamer-back-side-view-rejoices-victory-generative-ai_191095-2019.jpg?t=st=1738521982~exp=1738525582~hmac=da4d95e0ca339551ea71df545ab2e9b8b8b36ae6438d4a53a714944118fe72ea&w=996',
+      image:
+        'https://img.freepik.com/free-photo/professional-esports-gamer-back-side-view-rejoices-victory-generative-ai_191095-2019.jpg?t=st=1738521982~exp=1738525582~hmac=da4d95e0ca339551ea71df545ab2e9b8b8b36ae6438d4a53a714944118fe72ea&w=996',
       title: 'E-Sports',
       description:
         'Get ready for a fun-filled game of carrom and showcase your skills to sink the coins with precision and finesse!',
-    },     
+    },
     {
       image: 'https://wallpapers.com/images/featured/kabaddi-7awdb9vk9aw87dzo.jpg',
       title: 'Kabaddi',
@@ -89,7 +91,7 @@ const CardSplit = () => {
 
   return (
     <main id="  ">
-      <h1 className={`${fonts.funkyVibes.className} mb-11 text-5xl font-bold hedding`}>AAVEG&apos;25</h1>
+      <h1 className={`${fonts.funkyVibes.className} hedding mb-11 text-5xl font-bold`}>AAVEG&apos;25</h1>
       <p className="titlee">
         Welcome to AAVEG&apos;25!! One of the largest sports events in Jaipur is back with its 25th edition this
         February, that unites the vibrant spirit of the students through the thrill of sports. The annual sports fest of
@@ -113,7 +115,6 @@ const CardSplit = () => {
       </div>
       <div></div>
     </main>
-  
   );
 };
 

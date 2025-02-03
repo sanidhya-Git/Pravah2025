@@ -25,7 +25,7 @@ export const GotoMap: React.FC = () => {
                   <p key={index}>
                     <Link
                       href={link.href}
-                      className={`${fonts.funkyVibes.className} text-center text-[48px] text-white`}
+                      className={`${fonts.funkyVibes.className} text-center text-[32px] md:text-[48px] text-white`}
                     >
                       {link.label}
                     </Link>
@@ -40,18 +40,18 @@ export const GotoMap: React.FC = () => {
       <Drawer onClose={() => toggleShowGotoMap(false)} shouldScaleBackground>
         <DrawerTrigger
           onClick={() => toggleShowGotoMap(!showGotoMap)}
-          className="fixed right-0 top-0 z-50 m-6 cursor-pointer rounded-full bg-black"
+          className="fixed right-0 top-0 z-50 m-6 cursor-pointer rounded-full bg-black p-3"
         >
-          <p className="rounded-full px-4 py-2 text-[12px] uppercase text-white">Menu</p>
+          <p className="text-[12px] uppercase text-white">Menu</p>
         </DrawerTrigger>
         <DrawerContent>
           <>
             <DrawerTitle></DrawerTitle>
-            <div className="grid h-[200px] w-full grid-cols-5 gap-5 p-5">
+            <div className="grid h-[300px] w-full grid-cols-2 gap-4 p-4 md:grid-cols-5 md:h-[200px]">
               {MapSectionData.map((section, index) => (
                 <div
                   key={index}
-                  className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-200 p-5"
+                  className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-gray-200 p-3"
                   onClick={() => {
                     setMapArea(section.slug);
                   }}
@@ -66,7 +66,7 @@ export const GotoMap: React.FC = () => {
                     />
                   </div>
                   <p
-                    className={`relative z-10 text-sm font-semibold uppercase text-white ${section.slug === mapArea && 'underline'}`}
+                    className={`relative z-10 text-xs md:text-sm font-semibold uppercase text-white ${section.slug === mapArea && 'underline'}`}
                   >
                     {section.text}
                   </p>

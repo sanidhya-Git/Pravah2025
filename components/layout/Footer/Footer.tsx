@@ -63,30 +63,30 @@ export const Footer: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className='ffoter'>
-      <div className="mt-10 text-center">
-        <p className="text-gray-400">
-          Developed and designed by &nbsp;
-          <a
-            href="https://www.linkedin.com/in/sanidhya-mehra-a0310a25b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-gray-600"
-          >
-            Sanidhya Mehra
-          </a>
-          &nbsp;,&nbsp;
-          <a
-            href="https://www.linkedin.com/in/krishnawadhwa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-gray-600"
-          >
-            Krishna Wadhwa
-          </a>
-          .
-        </p>
-      </div>
+      <div className="ffoter">
+        <div className="mt-10 text-center">
+          <p className="text-gray-400">
+            Developed and designed by &nbsp;
+            <a
+              href="https://www.linkedin.com/in/sanidhya-mehra-a0310a25b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-600"
+            >
+              Sanidhya Mehra
+            </a>
+            &nbsp;,&nbsp;
+            <a
+              href="https://www.linkedin.com/in/krishnawadhwa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-600"
+            >
+              Krishna Wadhwa
+            </a>
+            .
+          </p>
+        </div>
       </div>
     </footer>
   );
