@@ -99,4 +99,3 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
 };
 
 export default Cards;
-

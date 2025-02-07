@@ -20,8 +20,8 @@ export const ImageInfo: React.FC = () => {
         </DrawerTrigger>
         <DrawerContent>
           <div className="h-[300px] w-full bg-white px-5">
-            <div className="flex flex-col md:flex-row gap-5">
-              <div className="h-[200px] w-full md:w-[350px] rounded-lg bg-gray-200"></div>
+            <div className="flex flex-col gap-5 md:flex-row">
+              <div className="h-[200px] w-full rounded-lg bg-gray-200 md:w-[350px]"></div>
               <div className="flex flex-col">
                 <DialogTitle className="text-lg font-semibold">
                   <p>{imageInfo.imageTitle}</p>
