@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react'; // Import useEffect
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
 import Image from 'next/image';
@@ -10,16 +10,13 @@ import { cultural_photos } from '@/public';
 const Cards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // Add useEffect to lock right-click
   useEffect(() => {
     const handleContextMenu = (event: MouseEvent) => {
-      event.preventDefault(); // Prevent the default context menu
+      event.preventDefault();
     };
 
-    // Attach the event listener to the document
     document.addEventListener('contextmenu', handleContextMenu);
 
-    // Cleanup the event listener on component unmount
     return () => {
       document.removeEventListener('contextmenu', handleContextMenu);
     };
@@ -37,60 +34,18 @@ const Cards: React.FC = () => {
         />
       </div>
       <div className="absolute inset-0 z-10" ref={containerRef}>
-        <Card
-          containerRef={containerRef}
-          src={cultural_photos.twenty.src}
-          alt="Example image"
-          rotate="6deg"
-          top="20%"
-          left="25%"
-          className="w-36 md:w-56 lg:w-64 xl:w-72"
-        />
-        <Card
-          containerRef={containerRef}
-          src={cultural_photos.nineteen.src}
-          alt="Example image"
-          rotate="12deg"
-          top="45%"
-          left="60%"
-          className="w-24 md:w-48 lg:w-56 xl:w-64"
-        />
-        <Card
-          containerRef={containerRef}
-          src={cultural_photos.eighteen.src}
-          alt="Example image"
-          rotate="-6deg"
-          top="20%"
-          left="40%"
-          className="xl:w-112 w-52 md:w-80 lg:w-96"
-        />
-        <Card
-          containerRef={containerRef}
-          src={cultural_photos.seventeen.src}
-          alt="Example image"
-          rotate="8deg"
-          top="50%"
-          left="40%"
-          className="w-48 md:w-72 lg:w-80 xl:w-96"
-        />
-        <Card
-          containerRef={containerRef}
-          src={cultural_photos.sixteen.src}
-          alt="Example image"
-          rotate="18deg"
-          top="20%"
-          left="65%"
-          className="w-40 md:w-64 lg:w-72 xl:w-80"
-        />
-        <Card
-          containerRef={containerRef}
-          src={cultural_photos.fifteen.src}
-          alt="Example image"
-          rotate="-3deg"
-          top="35%"
-          left="55%"
-          className="w-24 md:w-48 lg:w-56 xl:w-64"
-        />
+        {Object.entries(cultural_photos).map(([key, photo], index) => (
+          <Card
+            key={key}
+            containerRef={containerRef}
+            src={photo.src}
+            alt={`Example image ${index + 1}`}
+            rotate={`${(index % 2 === 0 ? 1 : -1) * (index + 3)}deg`}
+            top={`${20 + index * 10}%`}
+            left={`${25 + (index % 3) * 15}%`}
+            className="w-36 md:w-56 lg:w-64 xl:w-72"
+          />
+        ))}
       </div>
     </div>
   );
@@ -144,3 +99,4 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
 };
 
 export default Cards;
+

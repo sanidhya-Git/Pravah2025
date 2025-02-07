@@ -20,13 +20,13 @@ export const ImageInfo: React.FC = () => {
         </DrawerTrigger>
         <DrawerContent>
           <div className="h-[300px] w-full bg-white px-5">
-            <div className="flex gap-5">
-              <div className="h-[200px] w-[350px] rounded-lg bg-gray-200"></div>
-              <div>
-                <DialogTitle>
+            <div className="flex flex-col md:flex-row gap-5">
+              <div className="h-[200px] w-full md:w-[350px] rounded-lg bg-gray-200"></div>
+              <div className="flex flex-col">
+                <DialogTitle className="text-lg font-semibold">
                   <p>{imageInfo.imageTitle}</p>
                 </DialogTitle>
-                <p>{imageInfo.imageDescription}</p>
+                <p className="text-sm md:text-base">{imageInfo.imageDescription}</p>
               </div>
             </div>
           </div>

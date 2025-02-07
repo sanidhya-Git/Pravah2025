@@ -110,14 +110,24 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
     }
   };
 
-  const handleContextMenu = (event: React.MouseEvent) => {
-    event.preventDefault();
-    setIsLocked((prev) => !prev); // Toggle lock state on right-click
+  const handleMouseDown = (e: React.MouseEvent<HTMLImageElement>) => {
+    e.preventDefault();
+    updateZIndex();
+  };
+
+  const handleClick = () => {
+    setIsLocked((prev) => !prev); // Toggle lock state on left-click
+  };
+
+  const handleContextMenu = (e: React.MouseEvent<HTMLImageElement>) => {
+    e.preventDefault();
+    setIsLocked(!isLocked); // Toggle lock state on right-click
   };
 
   return (
     <motion.img
-      onMouseDown={updateZIndex}
+      onMouseDown={handleMouseDown}
+      onClick={handleClick}
       onContextMenu={handleContextMenu}
       style={{
         top,
@@ -136,3 +146,4 @@ const Card: React.FC<CardProps> = ({ alt, className, containerRef, left, rotate,
 };
 
 export default ThirakEventPhotoCards;
+
