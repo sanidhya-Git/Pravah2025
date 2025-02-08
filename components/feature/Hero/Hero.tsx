@@ -259,7 +259,7 @@ export const Hero: React.FC = () => {
                     imageTitle: 'खम्मा खणी',
                     imageDescription:
                       'The image you sent represents the phrase "खम्मा खणी" in Hindi. This is a common greeting in the state of Rajasthan, India, and is similar to saying "Excuse me" or "Pardon me." It is a polite way to get someone’s attention or to apologize for any inconvenience.',
-                      image:cultural_photos.one
+                    image: cultural_photos.one,
                   });
                 }}
               >
@@ -307,7 +307,7 @@ export const Hero: React.FC = () => {
                     imageTitle: 'Ayodhya',
                     imageDescription:
                       'Ayodhya, located in the Indian state of Uttar Pradesh, is one of the most sacred cities in Hinduism. Known as the birthplace of Lord Rama, the seventh incarnation of Lord Vishnu, it holds immense spiritual and cultural significance. Ayodhya is prominently mentioned in the ancient Indian epic, the Ramayana, where it is described as a prosperous and holy kingdom ruled by King Dasharatha. The city is renowned for the Ram Mandir, a temple dedicated to Lord Rama, symbolizing faith, devotion, and cultural heritage. Ayodhya’s rich history, ancient temples, and connection to Sanatan Dharma make it a revered pilgrimage destination for millions of devotees worldwide.',
-                      image:cultural_photos.two
+                    image: cultural_photos.two,
                   });
                 }}
               >
@@ -353,7 +353,7 @@ export const Hero: React.FC = () => {
                     imageTitle: 'Buddhist Temple',
                     imageDescription:
                       'The structure in the image resembles a Pagoda or Buddhist Temple, commonly seen in East Asian countries like China, Japan, and Korea. These temples are integral to Buddhist and Taoist traditions and are often used for worship, meditation, and housing sacred relics. The distinct architectural features, such as the curved, tiered roofs, elevated platforms, and vibrant colors, are characteristic of East Asian religious structures. In Japan, such buildings may be referred to as Shinto Shrines or Buddhist Temples, while in China, they are often called Pagodas. The design emphasizes harmony, spirituality, and connection to nature, central to Eastern culture.',
-                      image:cultural_photos.three
+                    image: cultural_photos.three,
                   });
                 }}
               >
@@ -451,9 +451,8 @@ export const Hero: React.FC = () => {
                     imageTitle: 'Kettuvallams',
                     imageDescription:
                       'The image showcases Keralas houseboats, known as Kettuvallams, which are an integral part of South Indian culture. Traditionally used to transport goods like rice and spices, these boats now serve as floating homes for tourists exploring Keralas scenic backwaters. Crafted from eco-friendly materials like bamboo and wood, houseboats reflect Kerala’s sustainable architecture and rich craftsmanship. They offer serene journeys through lush landscapes, coconut groves, and peaceful villages. The backwaters, a unique network of canals and lakes, are central to Kerala’s tourism and local life. These houseboats symbolize Kerala’s natural beauty, cultural heritage, and the state’s renowned hospitality.',
-                      image:cultural_photos.eleven
+                    image: cultural_photos.eleven,
                   });
-                  
                 }}
               >
                 <ImageInfo />

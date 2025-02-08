@@ -5,7 +5,7 @@ import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import { fonts } from '@/fonts';
 
-import {cn} from "@/lib/utils"
+import { cn } from '@/lib/utils';
 
 const Card = ({ i, title, description, src, url, color, range, targetScale }) => {
   const container = useRef(null);
@@ -41,11 +41,12 @@ const Card = ({ i, title, description, src, url, color, range, targetScale }) =>
           </div>
 
           <div className={`${styles.imageContainer} min-w-full sm:min-w-fit`}>
-            <motion.div className={styles.inner} 
-            // style={{width:"100%"}}
-            style={{ scale: imageScale }}
+            <motion.div
+              className={styles.inner}
+              // style={{width:"100%"}}
+              style={{ scale: imageScale }}
             >
-              <Image fill src={src} alt="image" className="object-top w-full" />
+              <Image fill src={src} alt="image" className="w-full object-top" />
             </motion.div>
           </div>
         </div>

@@ -3,7 +3,7 @@
 import { useGotoMap } from '@/global/stateHooks';
 import React from 'react';
 
-import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle, Button } from '@/components/ui';
+import { Button } from '@/components/ui';
 import { MapAreaMenu, MapSectionData } from './data';
 import { motion } from 'framer-motion';
 import { fonts } from '@/fonts';
@@ -59,7 +59,6 @@ export const GotoMap: React.FC = () => {
                         onClick={() => {
                           toggleShowGotoMap(false);
                         }}
-
                       >
                         {link.label}
                       </Link>

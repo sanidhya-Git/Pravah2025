@@ -2,7 +2,7 @@
 
 import { useHandleImageInfo } from '@/global/stateHooks';
 import React from 'react';
-import Image from "next/image"
+import Image from 'next/image';
 
 // shadcn components
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui';
@@ -22,8 +22,8 @@ export const ImageInfo: React.FC = () => {
         <DrawerContent>
           <div className="h-[300px] w-full bg-white px-5">
             <div className="flex flex-col gap-5 md:flex-row">
-              <div className="h-[280px] flex justify-center items-center w-full rounded-lg bg-gray-200 relative overflow-hidden max-w-[300px] min-w-[250px]">
-                <Image src={imageInfo.image} alt="image" className="image-contain"/>
+              <div className="relative flex h-[280px] w-full min-w-[250px] max-w-[300px] items-center justify-center overflow-hidden rounded-lg bg-gray-200">
+                <Image src={imageInfo.image} alt="image" className="image-contain" />
               </div>
               <div className="flex flex-col">
                 <DialogTitle className="text-lg font-semibold">
