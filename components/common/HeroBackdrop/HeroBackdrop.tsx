@@ -91,7 +91,7 @@ export const HeroBackdrop: React.FC = () => {
           onClick={() => {
             setShowImageInfo(true);
             setImageInfo({
-              image: {
+             image: {
                 src: logo,
                 width: 2000,
                 height: 2000,
