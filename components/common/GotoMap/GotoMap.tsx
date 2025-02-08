@@ -3,51 +3,91 @@
 import { useGotoMap } from '@/global/stateHooks';
 import React from 'react';
 
-// shadcn components
-import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle } from '@/components/ui';
+import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle, Button } from '@/components/ui';
 import { MapAreaMenu, MapSectionData } from './data';
 import { motion } from 'framer-motion';
 import { fonts } from '@/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { AnimatePresence } from 'framer-motion';
+
 export const GotoMap: React.FC = () => {
   const { showGotoMap, toggleShowGotoMap, mapArea, setMapArea } = useGotoMap();
 
   return (
     <>
-      {showGotoMap && (
-        <motion.div className="fixed left-[50%] top-[20%] z-[100] flex h-screen w-full -translate-x-1/2 justify-center">
-          {MapAreaMenu.filter((menu) => menu.region === mapArea).map((menu, index) => (
-            <div key={index}>
-              <>
-                {menu.links.map((link, index) => (
-                  <p key={index}>
-                    <Link
-                      href={link.href}
-                      className={`${fonts.funkyVibes.className} text-center text-[32px] text-white md:text-[48px]`}
-                    >
-                      {link.label}
-                    </Link>
-                  </p>
-                ))}
-              </>
-            </div>
-          ))}
-        </motion.div>
-      )}
+      <Button
+        type="button"
+        className="fixed right-0 top-0 z-50 m-6 cursor-pointer rounded-full bg-black p-3"
+        onClick={() => toggleShowGotoMap(!showGotoMap)}
+      >
+        Menu
+      </Button>
 
-      <Drawer onClose={() => toggleShowGotoMap(false)} shouldScaleBackground>
-        <DrawerTrigger
-          onClick={() => toggleShowGotoMap(!showGotoMap)}
-          className="fixed right-0 top-0 z-50 m-6 cursor-pointer rounded-full bg-black p-3"
-        >
-          <p className="text-[12px] uppercase text-white">Menu</p>
-        </DrawerTrigger>
-        <DrawerContent>
-          <>
-            <DrawerTitle></DrawerTitle>
-            <div className="grid h-[300px] w-full grid-cols-2 gap-4 p-4 md:h-[200px] md:grid-cols-5">
+      <div
+        className={`fixed z-[100] h-screen w-full transition-colors duration-200 ${showGotoMap ? 'bg-black/70' : 'pointer-events-none bg-transparent'} `}
+        onClick={() => {
+          toggleShowGotoMap(false);
+        }}
+      ></div>
+
+      <AnimatePresence>
+        {showGotoMap && (
+          <motion.div
+            initial={{
+              opacity: 0,
+              transitionDuration: '100',
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+              transitionDuration: '50',
+            }}
+            className="fixed left-[50%] top-[20%] z-[200] flex w-full -translate-x-1/2 justify-center"
+          >
+            {MapAreaMenu.filter((menu) => menu.region === mapArea).map((menu, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <>
+                  {menu.links.map((link, index) => (
+                    <p key={index}>
+                      <Link
+                        href={link.href}
+                        className={`${fonts.funkyVibes.className} text-center text-[32px] text-white md:text-[48px]`}
+                        onClick={() => {
+                          toggleShowGotoMap(false);
+                        }}
+
+                      >
+                        {link.label}
+                      </Link>
+                    </p>
+                  ))}
+                </>
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showGotoMap && (
+          <motion.div
+            initial={{
+              bottom: '-100%',
+            }}
+            animate={{
+              // y: 50,
+              bottom: 0,
+            }}
+            exit={{
+              // y: 0,
+              bottom: '-100%',
+            }}
+            className={`fixed z-[200] h-[200px] w-full bg-white duration-75`}
+          >
+            <div className="grid h-[200px] w-full grid-cols-2 gap-4 p-4 md:h-[200px] md:grid-cols-5">
               {MapSectionData.map((section, index) => (
                 <div
                   key={index}
@@ -73,9 +113,9 @@ export const GotoMap: React.FC = () => {
                 </div>
               ))}
             </div>
-          </>
-        </DrawerContent>
-      </Drawer>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

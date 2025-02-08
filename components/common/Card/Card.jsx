@@ -5,6 +5,8 @@ import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import { fonts } from '@/fonts';
 
+import {cn} from "@/lib/utils"
+
 const Card = ({ i, title, description, src, url, color, range, targetScale }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -19,7 +21,7 @@ const Card = ({ i, title, description, src, url, color, range, targetScale }) =>
     <div ref={container} className={styles.cardContainer}>
       <motion.div
         style={{ backgroundColor: color, scale, top: `calc(-5vh + ${i * 25}px)` }}
-        className={`${styles.card}`}
+        className={cn(styles.card)}
       >
         <h2 className={fonts.funkyVibes.className}>{title}</h2>
         <div className={styles.body}>
@@ -38,9 +40,12 @@ const Card = ({ i, title, description, src, url, color, range, targetScale }) =>
             </span>
           </div>
 
-          <div className={styles.imageContainer}>
-            <motion.div className={styles.inner} style={{ scale: imageScale }}>
-              <Image fill src={src} alt="image" className="object-top" />
+          <div className={`${styles.imageContainer} min-w-full sm:min-w-fit`}>
+            <motion.div className={styles.inner} 
+            // style={{width:"100%"}}
+            style={{ scale: imageScale }}
+            >
+              <Image fill src={src} alt="image" className="object-top w-full" />
             </motion.div>
           </div>
         </div>

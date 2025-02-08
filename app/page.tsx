@@ -1,13 +1,18 @@
+'use client';
+
 import React from 'react';
 
 // Components
 import { Hero } from '@/components/feature';
-import { GotoMap, Loader } from '@/components/common';
+import { GotoMap } from '@/components/common';
+
+
 
 const Home = () => {
+
   return (
     <>
-      <Loader />
+    {/* <div className="w-full h-screen bg-pink-500"/> */}
       <GotoMap />
       <Hero />
     </>

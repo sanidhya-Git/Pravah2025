@@ -84,7 +84,6 @@ const handleMouseClick = (
     }
   }
 };
-
 export const ImageAppearAnimation = ({ imageContainerRef }: { imageContainerRef: RefObject<HTMLDivElement> }) => {
   const [divs, setDivs] = useState<DivCoordinate[]>([]);
   const [lastPosition, setLastPosition] = useState<{ x: number; y: number } | null>(null);
@@ -111,7 +110,6 @@ export const ImageAppearAnimation = ({ imageContainerRef }: { imageContainerRef:
     ],
     [],
   );
-
   // Use useCallback to memoize the event handler function
   const memoizedHandleMouseClick = useCallback(
     (event: MouseEvent) =>

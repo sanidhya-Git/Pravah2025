@@ -196,6 +196,7 @@
       flex-direction: column; // Stack description and image
       gap: 15px; // Adjust gap for smaller screens
       
+      
       .description {
         width: 100%; // Full width
         position: static; // Reset position
@@ -203,6 +204,7 @@
       }
 
       .imageContainer {
+        margin-top: 50px;
         width: 100%; // Full width
         height: 150px; // Fixed height for images
       }

@@ -79,7 +79,7 @@ export const GalleryTwo = () => {
                     fill
                     alt="image"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover object-top"
+                    className="object-contain object-top"
                   />
                 </motion.div>
               </motion.div>

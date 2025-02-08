@@ -19,4 +19,5 @@ export type MapArea = 'north' | 'west' | 'central' | 'east' | 'south';
 export type ImageInfoPropsType = {
   imageTitle: string;
   imageDescription: string;
+  image:StaticImageData
 };

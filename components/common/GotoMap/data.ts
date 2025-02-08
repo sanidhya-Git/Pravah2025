@@ -46,7 +46,7 @@ export const MapAreaMenu: {
     region: 'north',
 
     links: [
-      { label: 'Home', href: '' },
+      { label: 'Home', href: '/Hero' },
       { label: 'About', href: '/about' },
       { label: 'Register', href: '/' },
     ],
@@ -69,7 +69,7 @@ export const MapAreaMenu: {
   {
     region: 'east',
     links: [
-      { label: 'Aaveg', href: '/' },
+      { label: 'Aaveg', href: '/aveg' },
       { label: 'Campus Ambassador', href: '/' },
     ],
   },

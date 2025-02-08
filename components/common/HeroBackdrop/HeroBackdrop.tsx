@@ -144,6 +144,7 @@ export const HeroBackdrop: React.FC = () => {
           ref={videoRef}
           className="min-h-screen w-full object-cover"
           loop
+          muted
           autoPlay={isPlaying}
           onClick={handleVideoChange}
         >
