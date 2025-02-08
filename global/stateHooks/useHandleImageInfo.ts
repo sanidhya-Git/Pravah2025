@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { ImageInfoPropsType } from '@/types';
+import defaultImage from '@/public/default-image.png'; // Import a valid StaticImageData image
 
 export type HandleImageInfoState = {
   showImageInfo: boolean;
@@ -14,6 +15,7 @@ export const useHandleImageInfo = create<HandleImageInfoState>((set) => ({
   imageInfo: {
     imageTitle: '',
     imageDescription: '',
+    image: defaultImage, // Using an actual StaticImageData import
   },
   setImageInfo: (imageInfo) => set({ imageInfo }),
 }));
