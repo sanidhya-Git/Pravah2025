@@ -91,6 +91,12 @@ export const HeroBackdrop: React.FC = () => {
           onClick={() => {
             setShowImageInfo(true);
             setImageInfo({
+              image: {
+                src: logo,
+                width: 2000,
+                height: 2000,
+                unoptimized: true,
+                },
               imageTitle: 'hero backdrop',
               imageDescription: 'hello',
             });
@@ -98,6 +104,7 @@ export const HeroBackdrop: React.FC = () => {
         >
           <ImageInfo />
         </div>
+        
 
         <div
           ref={pravah_ref}
