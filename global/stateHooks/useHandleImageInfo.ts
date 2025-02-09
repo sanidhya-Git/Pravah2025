@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { ImageInfoPropsType } from '@/types';
-import defaultImage from '@/public/default-image.png'; // Import a valid StaticImageData image
+import Image from 'next/image'; // Correct import
+import { StaticImageData } from 'next/image';
 
 export type HandleImageInfoState = {
   showImageInfo: boolean;
@@ -15,7 +16,7 @@ export const useHandleImageInfo = create<HandleImageInfoState>((set) => ({
   imageInfo: {
     imageTitle: '',
     imageDescription: '',
-    image: defaultImage, // Using an actual StaticImageData import
+    image: {} as StaticImageData, // Correct type for Next.js images
   },
   setImageInfo: (imageInfo) => set({ imageInfo }),
 }));

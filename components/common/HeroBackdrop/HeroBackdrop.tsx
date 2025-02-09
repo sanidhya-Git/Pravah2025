@@ -95,7 +95,6 @@ export const HeroBackdrop: React.FC = () => {
                 src: logo.src,
                 width: 2000,
                 height: 2000,
-               
               },
               imageTitle: 'hero backdrop',
               imageDescription: 'hello',
