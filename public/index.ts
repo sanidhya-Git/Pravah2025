@@ -57,7 +57,7 @@ import twentyone from './cultural_photo/21.webp';
 import twentytwo from './cultural_photo/22.webp';
 import twentythree from './cultural_photo/23.webp';
 
-import logo from './logo.png';
+import logo from './logo.webp';
 
 const cultural_photos = {
   one,

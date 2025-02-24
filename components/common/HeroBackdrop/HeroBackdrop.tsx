@@ -3,17 +3,15 @@
 import Image from 'next/image';
 import React, { useLayoutEffect, useRef, useState } from 'react';
 
-// Gsap
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Assets
 import { mountain_one, mountain_three, sky } from '@/public';
 import { fonts } from '@/fonts';
 import { ImageInfo } from '../ImageInfo';
 import { useHandleImageInfo } from '@/global/stateHooks';
 
-import logo from '@/public/logo.png'; // Import your logo here
+import logo from '@/public/logo.webp'; 
 
 export const HeroBackdrop: React.FC = () => {
   const { setShowImageInfo, setImageInfo } = useHandleImageInfo();
@@ -115,7 +113,6 @@ export const HeroBackdrop: React.FC = () => {
             2025
           </p>
         </div>
-
         <Image
           src={mountain_one}
           ref={mountain_one_ref}
@@ -149,7 +146,6 @@ export const HeroBackdrop: React.FC = () => {
           ref={videoRef}
           className="min-h-screen w-full object-cover"
           loop
-          
           autoPlay={isPlaying}
           onClick={handleVideoChange}
         >
