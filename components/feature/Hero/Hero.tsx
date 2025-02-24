@@ -94,6 +94,9 @@ const CelebritySection: React.FC = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
           breakpoints={{
+            360: {
+              slidesPerView: 1,
+            },
             640: {
               slidesPerView: 2, // For small tablets
             },
